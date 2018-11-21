@@ -38,6 +38,8 @@ What I have done this week
 - Tested the "x" cancel last input chat
 - Created a video recording for the showcase
 
+![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/yinghua_qin/GifMaker_20181120214214887.gif)
+
 What I plan to do next week
 
 - Implement the design pattern on Login function
