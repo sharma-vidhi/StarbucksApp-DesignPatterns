@@ -2,6 +2,9 @@
 
 The idea is to leverage the individual project implementation and re-build the Starbuck Mobile App on processing with animation UI. 
 
+![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/yinghua_qin/GifMaker_20181120214214887.gif)
+
+
 Download and install the Processing. https://processing.org/
 
 References:
@@ -38,7 +41,6 @@ What I have done this week
 - Tested the "x" cancel last input chat
 - Created a video recording for the showcase
 
-![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/yinghua_qin/GifMaker_20181120214214887.gif)
 
 What I plan to do next week
 
