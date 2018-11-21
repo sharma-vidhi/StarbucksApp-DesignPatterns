@@ -1,0 +1,30 @@
+PImage pinScreen;  // Declare a variable of type PImage
+PImage myCards;  // Declare a variable of type PImage
+
+int w=450;
+int h=908;
+boolean changeScreen = false;
+void setup() {
+  size(450,908);
+  // Make a new instance of a PImage by loading an image file
+  pinScreen = loadImage("pin_screen.jpg");
+  myCards = loadImage("my_cards.png");
+}
+
+void draw() {
+  pinScreen.resize(w,h);
+  myCards.resize(w,h);
+
+  background(pinScreen);
+  // stroke(255);
+  if (mousePressed == true) {
+    if (mouseButton == LEFT) {
+      changeScreen = true;
+    }
+  }
+
+  if (changeScreen) {
+    background(myCards);
+  }
+
+}

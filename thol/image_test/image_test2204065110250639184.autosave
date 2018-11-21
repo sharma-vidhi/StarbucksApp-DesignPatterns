@@ -1,0 +1,60 @@
+PImage pinScreen;  // Declare a variable of type PImage
+PImage myCards;  // Declare a variable of type PImage
+
+int w=450;
+int h=908;
+boolean changeScreen = false;
+void setup() {
+  size(450,908);
+  // Make a new instance of a PImage by loading an image file
+  pinScreen = loadImage("pin_screen.jpg");
+  myCards = loadImage("my_cards.png");
+}
+
+void draw() {
+  pinScreen.resize(w,h);
+  myCards.resize(w,h);
+
+  background(pinScreen);
+  
+  textSize(32);
+  textAlign(CENTER);
+  text("****", 225, 190); 
+
+  frameRate(12);
+  println(mouseX + " : " + mouseY);
+  noFill();
+  rect(90,487,270,224);
+  
+  rect(90,487,50,50);
+  rect(197,487,50,50);
+  rect(310,487,50,50);
+  
+  rect(90,545,50,50);
+  rect(197,545,50,50);
+  rect(310,545,50,50);
+
+  rect(90,603,50,50);
+  rect(197,603,50,50);
+  rect(310,603,50,50);
+  
+  rect(90,661,50,50);
+  rect(197,661,50,50);
+  rect(310,661,50,50);
+  
+  if (mousePressed == true) {
+    if (mouseButton == LEFT) {
+      changeScreen = true;
+    }
+  }
+
+  //if (changeScreen) {
+  //  background(myCards);
+  //}
+
+}
+
+//size(400, 400);
+//     background(192, 64, 0);
+//     stroke(255);
+//     line(150, 25, 270, 350);
