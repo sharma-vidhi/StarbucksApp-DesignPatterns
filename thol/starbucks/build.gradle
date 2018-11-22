@@ -105,6 +105,11 @@ dependencies {
     smartsmells 'io.gitlab.arturbosch.smartsmells:SmartSmells:1.0.0.RC8'
 }
 
+/* Processing configuration */
+
+dependencies {
+    compile 'quil:processing-core:3.3.7'
+}
 
 
 
