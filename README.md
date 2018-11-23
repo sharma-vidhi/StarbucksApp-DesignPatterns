@@ -2,9 +2,6 @@
 
 The idea is to leverage the individual project implementation and re-build the Starbuck Mobile App on processing with animation UI. 
 
-![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/yinghua_qin/GifMaker_20181120214214887.gif)
-
-
 Download and install the Processing. https://processing.org/
 
 References:
@@ -20,6 +17,8 @@ What I have done this week
 
 - I started from looking at some examples of the Processing. 
 - Building UI and annimation on processing seems simple. 
+- Showcase for week 1
+![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/yinghua_qin/GifMaker_20181120214214887.gif)
 
 What I plan to do next week
 
