@@ -11,6 +11,16 @@ References:
 - Java Programming with Processing from professor. https://slack-files.com/files-pri-safe/T0AMW0A3S-FE1PXQENB/java_programming_with_processing.pdf?c=1542777253-18a17676a94dbe8e972df65fdb4a86d335ebf835
 - Processing official website.   https://processing.org/
 
+Development environment setup instruction: 
+
+      1) download the jar here: https://github.com/nguyensjsu/fa18-202-mystic/blob/master/yinghua_qin/starbucks.jar
+      2) put this jar to the processing lib folder , such as: processing\modes\java\libraries\starbucks\library\starbucks.jar
+      3) restart the process IDE
+      4) import the lib into processing
+      5) download the project from here: https://github.com/nguyensjsu/fa18-202-mystic/tree/master/yinghua_qin/starbucks
+      6) start to update the starbucks.pde and commit the changes
+
+
 ## Journal Week #1
 
 ### Login Function (Yinghua Qin)
