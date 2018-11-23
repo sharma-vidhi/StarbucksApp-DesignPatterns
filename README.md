@@ -67,6 +67,10 @@ What I have done this week
       
       size(320,500);  //480
 
+- Showcase for week 3
+
+![] (https://github.com/nguyensjsu/fa18-202-mystic/blob/master/yinghua_qin/GifMaker_20181122180117424.gif)
+
 What I plan to do next week
 - Think about some wow factors to add into the project
 - Work with the team to get all screens implemented
