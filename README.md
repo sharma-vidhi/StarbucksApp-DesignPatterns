@@ -47,3 +47,27 @@ What I plan to do next week
 - Implement the design pattern on Login function
 - Link with the starbuck source code for screen flow
 
+## Journal Week #3
+
+### Login Function (Yinghua Qin)
+
+What I have done this week
+- I found a wait to use the .jar file in processing. 
+- With this, I could put all my personal project java code into a jar file and use it in this team project. 
+- Instruction: Put the starbucks.jar into the library folder under Processing software
+      processing\modes\java\libraries\starbucks\library\starbucks.jar
+- I got all the screens from professor's PDF of personal project
+- I worked out the size of the screen and the position mapping as listed on the PDF.
+      
+      h should same as the 500 in the size function
+      
+      int headerHeight=60;
+      int h=headerHeight+55*8;  //before:480; now: 500
+      
+      size(320,500);  //480
+
+What I plan to do next week
+- Think about some wow factors to add into the project
+- Work with the team to get all screens implemented
+
+
