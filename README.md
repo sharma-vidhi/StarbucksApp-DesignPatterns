@@ -1,6 +1,7 @@
 # CMPE 202 - Team Project - Starbuck Mobile App on Processing
 
 The idea is to leverage the individual project implementation and re-build the Starbuck Mobile App on processing with animation UI. 
+
 ![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/yinghua_qin/GifMaker_20181120214214887.gif)
 
 Download and install the Processing. https://processing.org/
