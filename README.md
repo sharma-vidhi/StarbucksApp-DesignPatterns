@@ -52,10 +52,13 @@ What I plan to do next week
 ### Login Function (Yinghua Qin)
 
 What I have done this week
-- I found a wait to use the .jar file in processing. 
+- I found a way to use the .jar file in processing. 
 - With this, I could put all my personal project java code into a jar file and use it in this team project. 
-- Instruction: Put the starbucks.jar into the library folder under Processing software
+- Instruction: 
+
+      Put the starbucks.jar into the library folder under Processing software.
       processing\modes\java\libraries\starbucks\library\starbucks.jar
+      Import the library to the project. 
       ![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/yinghua_qin/AddStarbuckJar.png)
 - I got all the screens from professor's PDF of personal project
 - I worked out the size of the screen and the position mapping as listed on the PDF.
