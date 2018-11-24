@@ -77,15 +77,15 @@ What I have done this week
 - I have integrated the source code for settings and Add card functionalities
 - Designed 'Add Starbucks Cards' button on settings screen, implemented onhover and onClick events
 - Successfully implemented screen redirection functionality from settings to AddCard
+- Showcase for week 2
+
+![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/srivatsa_mulpuri/20181122_230851.gif)
 
 What will I do do next week?
 
 - Check if can reuse the starbucks personal project source code completely for add card. if not, identify the necessary modifications
 - Create fields for cardnumber and cvv code using processing
 - Write logic to convert keypad touch event to starbucks app touch event 
-- Showcase for week 2
-
-![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/srivatsa_mulpuri/20181122_230851.gif)
 
 
 ## Journal Week #3
