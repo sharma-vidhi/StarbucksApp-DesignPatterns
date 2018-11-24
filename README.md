@@ -83,6 +83,9 @@ What will I do do next week?
 - Check if can reuse the starbucks personal project source code completely for add card. if not, identify the necessary modifications
 - Create fields for cardnumber and cvv code using processing
 - Write logic to convert keypad touch event to starbucks app touch event 
+- Showcase for week 2
+
+![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/srivatsa_mulpuri/20181122_230851.gif)
 
 
 ## Journal Week #3
