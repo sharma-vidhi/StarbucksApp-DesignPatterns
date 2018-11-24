@@ -35,7 +35,6 @@ void setup() {
 void draw() {
  
 
-  
   textSize(32);
   String screen=app.screen();
   int sIndex=Arrays.asList(screens).indexOf(screen);
@@ -65,7 +64,8 @@ void draw() {
               String balance=lines[7];
                       textAlign(CENTER);
                       fill(255, 255, 255, 255);
-                      text (balance, 20, 160, 270, 50);
+                      //text (balance, 20, 160, 270, 50);
+                      text (balance, 60, 295, 200, 40);
               
               break;  
             case "AddCard":
@@ -94,6 +94,7 @@ void draw() {
       textSize(25);
       textAlign(LEFT);
       fill(255, 255, 255, 255);
+      //text (mouseX + " : " + mouseY, 0, 20, 270, 50);
       text ("-"+kx+"-"+ky+"-", 0, 20, 270, 50);
       
     }

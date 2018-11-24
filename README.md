@@ -23,6 +23,23 @@ Development environment setup instruction:
 
 ## Journal Week #1
 
+### Feasibilty experiments in Processing (Thol Chidambaram)
+
+What I have done this week
+
+- Implemented examples in processing for loading images. 
+- Added default screenshots from new Starbucks app, rendered them in processing.
+- Modified the images to match the same functionaliy in Starbucks requirements pdf.
+- Try out rendering live Google map loading for Starbucks stores.
+- Showcase for week 1.
+
+What I plan to do next week
+
+- Get all screens ready to match the functionality in requirements.
+- Is it possible to use eclipse for IDE instead of using Processing?
+- Check the possibility of Features IDE modeling using AspectJ for feature selection.
+- How should I implement MyCards page to MyCardsOptions navigations? which pattern should I use?
+
 ### Login Function (Yinghua Qin)
 
 What I have done this week
@@ -69,6 +86,25 @@ What I plan to do next week
 
 - Implement the design pattern on Login function
 - Link with the starbuck source code for screen flow
+
+### MyCards Functionality (Thol Chidambaram)
+
+What I have done this week
+
+- Completed implementing the processing code in eclipse.
+- Ingegrated existing starbucks code along with projcessing's "core.jar"
+- Started wireframing on coordinate conversion between the new and old Starbucks app screens.
+- Completed creating new screen designs.
+- Enabled gradle to download and test processing jar files during project compile.
+
+What I'm blocked
+
+- Login screen implementation from Yinghua
+
+What I plan to do next week
+
+- Discuss with team on where they stand
+- Complete the entire app functionality in processing.
 
 ### AddCard Functionality (Srivatsa Mulpuri)
 
@@ -122,3 +158,18 @@ What I plan to do next week
 - Work with the team to get all screens implemented
 
 
+### AddCard Functionality (Srivatsa Mulpuri)
+
+What I have done this week
+
+- Developed Add Card functionality using starbucks personal project source code
+- Created font for card number and cvv
+- Made code changes to display carrd number and cvv in the appropriate fields
+- Add Card showcase version 1.0
+
+![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/srivatsa_mulpuri/20181124_163907.gif)
+
+What will I do do next week?
+
+- Come up with ideas to improve user experience
+- Work with team members and integrate the code
