@@ -38,6 +38,19 @@ What I plan to do next week
 - Would it be cool to create a QR code scan for login on Processing? It seems there is a QR code scan lib avaiable. 
 - Would it be cool to add sound when login fail and a happy sound when login success? 
 
+### AddCard Functionality (Srivatsa Mulpuri)
+
+What I have done this week
+
+- I went through the Processing tutorial online and examples on cmpe202 github
+- Created shapes and GUI elements like buttons using processing
+
+What will I do do next week?
+
+- Integrate the personal project source code for Settings and Add Card Functionalities
+- Create Buttons in Settings screen for a better user experience
+- Implement the screen redirection functionality from settings to AddCard
+
 ## Journal Week #2
 
 ### Login Function (Yinghua Qin)
@@ -56,6 +69,21 @@ What I plan to do next week
 
 - Implement the design pattern on Login function
 - Link with the starbuck source code for screen flow
+
+### AddCard Functionality (Srivatsa Mulpuri)
+
+What I have done this week
+
+- I have integrated the source code for settings and Add card functionalities
+- Designed 'Add Starbucks Cards' button on settings screen, implemented onhover and onClick events
+- Successfully implemented screen redirection functionality from settings to AddCard
+
+What will I do do next week?
+
+- Check if can reuse the starbucks personal project source code completely for add card. if not, identify the necessary modifications
+- Create fields for cardnumber and cvv code using processing
+- Write logic to convert keypad touch event to starbucks app touch event 
+
 
 ## Journal Week #3
 
