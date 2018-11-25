@@ -7,7 +7,7 @@ boolean debug=true;
 String[] screens = { "PinScreen", "MyCards", "AddCard", "MyCardsOptions","MyCardsMoreOptions", "MyCardsPay", "Rewards","Settings", "Store","Payments"};
 PImage[] screenImages = new PImage[screens.length];
 
-int kx,ky;
+
 int headerHeight=60;
 
 
@@ -95,21 +95,10 @@ void draw() {
       textAlign(LEFT);
       fill(255, 255, 255, 255);
       text (mouseX + " : " + mouseY, 0, 20, 270, 50);
-      //text ("-"+kx+"-"+ky+"-", 0, 20, 270, 50);
+      //text ("-"+ui5.getX()+"-"+ui5.getY()+"-", 0, 20, 270, 50);
       
     }
 
-}
-
-boolean overMyCardsPayCircle() {
-  float disX = 270 - mouseX;
-  float disY = 225 - mouseY;
-  int diameter = 60;
-  if (sqrt(sq(disX) + sq(disY)) < diameter/2 ) {
-    return true;
-  } else {
-    return false;
-  }
 }
 
 void mousePressed() {
@@ -117,59 +106,32 @@ void mousePressed() {
   //int y = 260;
   //int button_width = 106;
   //int button_height = 55;
- 
+    Point kpLeftTop = new Point(0,headerHeight);  //260:keypad;40:touch
   
-  Point kpRowColumn=new Point(3,8);
-  Point kpLeftTop=new Point(0,headerHeight);  //260:keypad;40:touch
-  Point buttonSize=new Point(106,55);
-
-  //int kx,ky;  //keypress at (kx,ky):4x3
-  kx=((int)(mouseX - kpLeftTop.x))/((int)buttonSize.x)+1;
-  ky=((int)(mouseY - kpLeftTop.y))/((int)buttonSize.y)+1;
-  
-  
-  //boolean kpzone= ( ky > 4 && ky<9 && kx<=3 && kx>=1 );
-  //boolean tzone= (fullScreen || ky <= 4 );
-  
+   Iphone5UI ui5 = new Iphone5UI();
+   ui5.setXY(app.screen());
+   int kx = ui5.getX();
+   int ky = ui5.getY();
    
-  if (app.screen().equals("MyCards")) {
-    if ((kx == 2 && ky == 4) || (kx == 3 && ky == 3)) {
-      kx = 1;  // set to some random keys
-      ky = 4;  
+   if (ui5.isValidXY() ) {
+     app.touch(kx, ky);
+   }
+   
+    Point menuSize = new Point(w/5,55);
+    boolean hasMenu=(!app.screen().equals("PinScreen") && !app.screen().equals("AddCard"));
+    if(hasMenu && ky==8) {
+         char mA='A';
+         int mIndex=((int)(mouseX - kpLeftTop.x))/((int)menuSize.x);
+         char mTrigger=(char)((int)mA+mIndex);
+         app.execute(String.valueOf(mTrigger)) ;
     }
-    if ( mouseX >= 60 && mouseX <= 260 &&
-      mouseY >= 295 && mouseY <= 370) { 
-      kx = 2;
-      ky = 4;
-    }
-    
-    if (overMyCardsPayCircle()){
-      kx = 3;
-      ky = 3;
-    }    
-  }
-
-  if((kx>=1 && kx<=kpRowColumn.x) && (ky>=1 && ky<=kpRowColumn.y)) {
-    app.touch(kx,ky);
-  }
-  
-
-  Point menuSize=new Point(w/5,55);
-  boolean hasMenu=(!app.screen().equals("PinScreen") && !app.screen().equals("AddCard"));
-  if(hasMenu && ky==8) {
-       char mA='A'; //<>//
-       int mIndex=((int)(mouseX - kpLeftTop.x))/((int)menuSize.x);
-       char mTrigger=(char)((int)mA+mIndex);
-       app.execute(String.valueOf(mTrigger)) ;
-  }
   
   if(app.screen().equals("AddCard")) {
-    if(kx==3 && ky==1) app.next();
-    if(kx==1 && ky==1) app.prev();
-  }
-  
-  if(app.screen().equals("MyCards")) {
-    if(kx==3 && ky==1) app.next();
-  }
-
+      if(kx==3 && ky==1) app.next();
+      if(kx==1 && ky==1) app.prev();
+    }
+    
+    if(app.screen().equals("MyCards")) {
+      if(kx==3 && ky==1) app.next();
+    } //<>//
 }
