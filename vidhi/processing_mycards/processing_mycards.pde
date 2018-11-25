@@ -1,4 +1,4 @@
-import starbucks.*;
+import starbucks.*; //<>// //<>//
 import java.awt.Point;
 import java.util.Arrays;
 
@@ -81,10 +81,10 @@ void draw() {
             lines = app.screenContents().split("\n");
                cardId =lines[6].trim().replace("[","").replace("]","");           
                       textAlign(CENTER);
-                      fill(50);
+                      fill(153);
                       //text (balance, 20, 160, 270, 50);
-                      textSize(25);
-                      text (cardId, 80, 100, 220, 100);  
+                      textSize(20);
+                      text (cardId, 75, 85, 225, 85);  
                       
             
               break;
@@ -127,7 +127,7 @@ void mousePressed() {
   
   
   //boolean kpzone= ( ky > 4 && ky<9 && kx<=3 && kx>=1 );
-  //boolean tzone= (fullScreen || ky <= 4 ); //<>//
+  //boolean tzone= (fullScreen || ky <= 4 );
    
 
   if((kx>=1 && kx<=kpRowColumn.x) && (ky>=1 && ky<=kpRowColumn.y)) {
@@ -138,7 +138,7 @@ void mousePressed() {
   Point menuSize=new Point(w/5,55);
   boolean hasMenu=(!app.screen().equals("PinScreen") && !app.screen().equals("AddCard"));
   if(hasMenu && ky==8) {
-       char mA='A'; //<>//
+       char mA='A';
        int mIndex=((int)(mouseX - kpLeftTop.x))/((int)menuSize.x);
        char mTrigger=(char)((int)mA+mIndex);
        app.execute(String.valueOf(mTrigger)) ;
