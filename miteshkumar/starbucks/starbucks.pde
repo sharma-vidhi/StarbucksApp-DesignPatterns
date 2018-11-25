@@ -49,8 +49,7 @@ void draw() {
                 fill(0, 102, 153, 204);
                 for (int i =0; i < min(pinInput.length(),4); i++) {
                   text (pinInput.substring(i,i+1), 40+i*70, 90, 50, 50);
-                }
-              
+                              
               lines = app.screenContents().split("\n");
               if(lines[3].trim().equals("Invalid Pin")){
                       textSize(18);
@@ -76,6 +75,8 @@ void draw() {
               text (cardcode, 20, 180, 270, 50);
               break;              
             case "MyCardsMoreOptions":
+              break;
+            case "MoreOptions":
               break;
             case "MyCardsPay":
               break;
