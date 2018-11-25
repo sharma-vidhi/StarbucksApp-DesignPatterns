@@ -60,6 +60,8 @@ void draw() {
               break;
             case "MyCards":  
               lines = app.screenContents().split("\n");
+              // Add this for myCards Balance
+              
               String balance=lines[7];
                       textAlign(CENTER);
                       fill(255, 255, 255, 255);
@@ -145,4 +147,48 @@ void mousePressed() {
     if(kx==3 && ky==1) app.next();
   }
 
+}
+
+void mousePressed_Help() {
+
+  
+  Point kpRowColumn=new Point(3,8);
+  Point kpLeftTop=new Point(0,headerHeight);  //260:keypad;40:touch
+  Point buttonSize=new Point(106,55);
+
+  //int kx,ky;  //keypress at (kx,ky):4x3
+  kx=((int)(mouseX - kpLeftTop.x))/((int)buttonSize.x)+1;
+  ky=((int)(mouseY - kpLeftTop.y))/((int)buttonSize.y)+1;
+  
+  
+  //boolean kpzone= ( ky > 4 && ky<9 && kx<=3 && kx>=1 );
+  //boolean tzone= (fullScreen || ky <= 4 );
+   
+
+  if((kx>=1 && kx<=kpRowColumn.x) && (ky>=1 && ky<=kpRowColumn.y)) {
+    app.touch(kx,ky);
+  }
+  
+
+  Point menuSize=new Point(w/5,55);
+  boolean hasMenu=(!app.screen().equals("PinScreen") && !app.screen().equals("AddCard"));
+  if(hasMenu && ky==8) {
+       char mA='A';
+       int mIndex=((int)(mouseX - kpLeftTop.x))/((int)menuSize.x);
+       char mTrigger=(char)((int)mA+mIndex);
+       app.execute(String.valueOf(mTrigger)) ;
+  }
+  
+  if(app.screen().equals("AddCard")) {
+    if(kx==3 && ky==1) app.next();
+    if(kx==1 && ky==1) app.prev();
+  }
+  
+  if(app.screen().equals("MyCards")) {
+    if(kx==3 && ky==1) app.next();
+  }
+
+  if (app.screen().equals("Settings")) {
+    if (ky==8) break;
+  }   
 }
