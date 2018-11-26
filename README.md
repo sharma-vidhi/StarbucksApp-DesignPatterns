@@ -173,3 +173,13 @@ What will I do do next week?
 
 - Come up with ideas to improve user experience
 - Work with team members and integrate the code
+
+## Journal Week #4
+
+### Login Function (Yinghua Qin)
+
+What I have done this week
+- I found a way to use the .jar file in processing. 
+
+What will I do do next week?
+
