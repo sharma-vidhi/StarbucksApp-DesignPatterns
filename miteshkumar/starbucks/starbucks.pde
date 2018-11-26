@@ -150,8 +150,6 @@ void mousePressed() {
 }
 
 void mousePressed_Help() {
-
-  
   Point kpRowColumn=new Point(3,8);
   Point kpLeftTop=new Point(0,headerHeight);  //260:keypad;40:touch
   Point buttonSize=new Point(106,55);
