@@ -49,8 +49,7 @@ void draw() {
                 fill(0, 102, 153, 204);
                 for (int i =0; i < min(pinInput.length(),4); i++) {
                   text (pinInput.substring(i,i+1), 40+i*70, 90, 50, 50);
-                }
-              
+                              
               lines = app.screenContents().split("\n");
               if(lines[3].trim().equals("Invalid Pin")){
                       textSize(18);
@@ -61,6 +60,8 @@ void draw() {
               break;
             case "MyCards":  
               lines = app.screenContents().split("\n");
+              // Add this for myCards Balance
+              
               String balance=lines[7];
                       textAlign(CENTER);
                       fill(255, 255, 255, 255);
@@ -76,6 +77,8 @@ void draw() {
               text (cardcode, 20, 180, 270, 50);
               break;              
             case "MyCardsMoreOptions":
+              break;
+            case "MoreOptions":
               break;
             case "MyCardsPay":
               break;
@@ -94,22 +97,11 @@ void draw() {
       textSize(25);
       textAlign(LEFT);
       fill(255, 255, 255, 255);
-      text (mouseX + " : " + mouseY, 0, 20, 270, 50);
-      //text ("-"+kx+"-"+ky+"-", 0, 20, 270, 50);
+      //text (mouseX + " : " + mouseY, 0, 20, 270, 50);
+      text ("-"+kx+"-"+ky+"-", 0, 20, 270, 50);
       
     }
 
-}
-
-boolean overMyCardsPayCircle() {
-  float disX = 270 - mouseX;
-  float disY = 225 - mouseY;
-  int diameter = 60;
-  if (sqrt(sq(disX) + sq(disY)) < diameter/2 ) {
-    return true;
-  } else {
-    return false;
-  }
 }
 
 void mousePressed() {
@@ -130,24 +122,7 @@ void mousePressed() {
   
   //boolean kpzone= ( ky > 4 && ky<9 && kx<=3 && kx>=1 );
   //boolean tzone= (fullScreen || ky <= 4 );
-  
    
-  if (app.screen().equals("MyCards")) {
-    if ((kx == 2 && ky == 4) || (kx == 3 && ky == 3)) {
-      kx = 1;  // set to some random keys
-      ky = 4;  
-    }
-    if ( mouseX >= 60 && mouseX <= 260 &&
-      mouseY >= 295 && mouseY <= 370) { 
-      kx = 2;
-      ky = 4;
-    }
-    
-    if (overMyCardsPayCircle()){
-      kx = 3;
-      ky = 3;
-    }    
-  }
 
   if((kx>=1 && kx<=kpRowColumn.x) && (ky>=1 && ky<=kpRowColumn.y)) {
     app.touch(kx,ky);
@@ -172,4 +147,48 @@ void mousePressed() {
     if(kx==3 && ky==1) app.next();
   }
 
+}
+
+void mousePressed_Help() {
+
+  
+  Point kpRowColumn=new Point(3,8);
+  Point kpLeftTop=new Point(0,headerHeight);  //260:keypad;40:touch
+  Point buttonSize=new Point(106,55);
+
+  //int kx,ky;  //keypress at (kx,ky):4x3
+  kx=((int)(mouseX - kpLeftTop.x))/((int)buttonSize.x)+1;
+  ky=((int)(mouseY - kpLeftTop.y))/((int)buttonSize.y)+1;
+  
+  
+  //boolean kpzone= ( ky > 4 && ky<9 && kx<=3 && kx>=1 );
+  //boolean tzone= (fullScreen || ky <= 4 );
+   
+
+  if((kx>=1 && kx<=kpRowColumn.x) && (ky>=1 && ky<=kpRowColumn.y)) {
+    app.touch(kx,ky);
+  }
+  
+
+  Point menuSize=new Point(w/5,55);
+  boolean hasMenu=(!app.screen().equals("PinScreen") && !app.screen().equals("AddCard"));
+  if(hasMenu && ky==8) {
+       char mA='A';
+       int mIndex=((int)(mouseX - kpLeftTop.x))/((int)menuSize.x);
+       char mTrigger=(char)((int)mA+mIndex);
+       app.execute(String.valueOf(mTrigger)) ;
+  }
+  
+  if(app.screen().equals("AddCard")) {
+    if(kx==3 && ky==1) app.next();
+    if(kx==1 && ky==1) app.prev();
+  }
+  
+  if(app.screen().equals("MyCards")) {
+    if(kx==3 && ky==1) app.next();
+  }
+
+  if (app.screen().equals("Settings")) {
+    if (ky==8) break;
+  }   
 }

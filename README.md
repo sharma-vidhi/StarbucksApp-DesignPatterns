@@ -158,3 +158,18 @@ What I plan to do next week
 - Work with the team to get all screens implemented
 
 
+### AddCard Functionality (Srivatsa Mulpuri)
+
+What I have done this week
+
+- Developed Add Card functionality using starbucks personal project source code
+- Created font for card number and cvv
+- Made code changes to display carrd number and cvv in the appropriate fields
+- Add Card showcase version 1.0
+
+![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/srivatsa_mulpuri/20181124_163907.gif)
+
+What will I do do next week?
+
+- Come up with ideas to improve user experience
+- Work with team members and integrate the code
