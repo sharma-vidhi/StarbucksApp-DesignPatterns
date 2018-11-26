@@ -12,6 +12,11 @@ PImage[] keypadButtonRollImages = new PImage[keypadButtons.length];
 PImage[] keypadButtonDownImages = new PImage[keypadButtons.length];
 ImageButtons[] keypadImageButtons = new ImageButtons[keypadButtons.length];
 
+PImage[] keypadButtonImagesPS = new PImage[keypadButtons.length];
+PImage[] keypadButtonRollImagesPS = new PImage[keypadButtons.length];
+PImage[] keypadButtonDownImagesPS = new PImage[keypadButtons.length];
+ImageButtons[] keypadImageButtonsPS = new ImageButtons[keypadButtons.length];
+
 int kx,ky;
 int headerHeight=60;
 
@@ -43,23 +48,34 @@ void setup() {
     keypadButtonDownImages[i] = loadImage("/keypadButtons/AddCard/"+keypadButtons[i]+"Down.png");
     keypadButtonDownImages[i].resize(106,56);
     
+    keypadButtonImagesPS[i] = loadImage("/keypadButtons/PinScreen/"+keypadButtons[i]+".png");
+    keypadButtonImagesPS[i].resize(106,56);
+    keypadButtonRollImagesPS[i] = loadImage("/keypadButtons/PinScreen/"+keypadButtons[i]+"Roll.png");
+    keypadButtonRollImagesPS[i].resize(106,56);
+    keypadButtonDownImagesPS[i] = loadImage("/keypadButtons/PinScreen/"+keypadButtons[i]+"Down.png");
+    keypadButtonDownImagesPS[i].resize(106,56);
+    
     if(i<3)
     {
       keypadButtonImages[i].resize(106,55);
       keypadButtonRollImages[i].resize(106,55);
       keypadButtonDownImages[i].resize(106,55);
       keypadImageButtons[i] = new ImageButtons(i*106, h-((4)*56), 106, 56, keypadButtonImages[i], keypadButtonRollImages[i], keypadButtonDownImages[i]);
+      keypadImageButtonsPS[i] = new ImageButtons(i*106, h-((4)*56), 106, 56, keypadButtonImagesPS[i], keypadButtonRollImagesPS[i], keypadButtonDownImagesPS[i]);
     }
     else if(i<6)
     {
       keypadImageButtons[i] = new ImageButtons((i%3)*106, h-((3)*56), 106, 56, keypadButtonImages[i], keypadButtonRollImages[i], keypadButtonDownImages[i]);
+      keypadImageButtonsPS[i] = new ImageButtons((i%3)*106, h-((3)*56), 106, 56, keypadButtonImagesPS[i], keypadButtonRollImagesPS[i], keypadButtonDownImagesPS[i]);
     }
     else if(i<9)
     {
       keypadImageButtons[i] = new ImageButtons((i%3)*106, h-((2)*56), 106, 56, keypadButtonImages[i], keypadButtonRollImages[i], keypadButtonDownImages[i]);
+      keypadImageButtonsPS[i] = new ImageButtons((i%3)*106, h-((2)*56), 106, 56, keypadButtonImagesPS[i], keypadButtonRollImagesPS[i], keypadButtonDownImagesPS[i]);
     }
     else {
       keypadImageButtons[i] = new ImageButtons((i%3)*106, h-((1)*56), 106, 56, keypadButtonImages[i], keypadButtonRollImages[i], keypadButtonDownImages[i]);
+      keypadImageButtonsPS[i] = new ImageButtons((i%3)*106, h-((1)*56), 106, 56, keypadButtonImagesPS[i], keypadButtonRollImagesPS[i], keypadButtonDownImagesPS[i]);
     }
     
     
@@ -80,7 +96,12 @@ void draw() {
   //System.out.print(screen);
   switch(screen) 
         { 
-            case "PinScreen":           
+            case "PinScreen":
+                for (int i = 0; i<keypadButtons.length; i++)
+                  {
+                    keypadImageButtonsPS[i].update();
+                    keypadImageButtonsPS[i].display();
+                  }
                 PinEntryMachine pm;
                 pm=app.getPinEntryMachin();
                 pinInput=pm.d1()+pm.d2()+pm.d3()+pm.d4();            
