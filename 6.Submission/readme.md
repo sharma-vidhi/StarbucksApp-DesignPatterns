@@ -19,6 +19,9 @@ Starbucks Mobile App on Processing
   - Set-pin function
   - UML diagrams (Activity, Use Case, Sequence, Domain)
 
+Tasks                      |  Tasks
+:-------------------------:|:-------------------------:
+![](./readme.assets/1543351854269.png)  |  ![](./readme.assets/1543351793435.png)
 
 
 ### Link to your team's GitHub Repo (*)
@@ -31,7 +34,7 @@ https://github.com/nguyensjsu/fa18-202-mystic/projects/2
 
 ### Link to your team's Project Journal (on GitHub)
 
-https://github.com/nguyensjsu/fa18-202-mystic/blob/master/README.md
+https://github.com/nguyensjsu/fa18-202-mystic/blob/master/Journal.md
 
 ### Link to your team's Google Sprint Task Sheet
 
