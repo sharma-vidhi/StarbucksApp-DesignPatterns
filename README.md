@@ -11,15 +11,36 @@ References:
 - Java Programming with Processing from professor. https://slack-files.com/files-pri-safe/T0AMW0A3S-FE1PXQENB/java_programming_with_processing.pdf?c=1542777253-18a17676a94dbe8e972df65fdb4a86d335ebf835
 - Processing official website.   https://processing.org/
 
-Development environment setup instruction: 
+Development environment setup instruction (Updated to V2 at November 26, 2018)
 
-      1) download the jar here: https://github.com/nguyensjsu/fa18-202-mystic/blob/master/yinghua_qin/starbucks.jar
-      2) put this jar to the processing lib folder , such as: processing\modes\java\libraries\starbucks\library\starbucks.jar
-      3) restart the process IDE
-      4) import the lib into processing
-      5) download the project from here: https://github.com/nguyensjsu/fa18-202-mystic/tree/master/yinghua_qin/starbucks
-      6) start to update the starbucks.pde and commit the changes
+    1) Download the jar files here: 
+    - https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/StarbucksGUI/lib/starbucks.jar
+    - https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/StarbucksGUI/lib/starbucksyh.jar
+    
+    2) Put the jar files to the processing lib folder , such as: - -
+    - processing\modes\java\libraries\starbucks\library\starbucks.jar
+    - processing\modes\java\libraries\starbucksyh\library\starbucksyh.jar
+    
+    3) Restart the process IDE
+    
+    4) Import the lib into processing
+    
+    5) Download the project from here: https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/StarbucksGUI
+    
+    6) Start to update the starbucksGUI.pde for existing screens and commit the changes
 
+Additional Pattern Implementation
+
+    1) Get the above environment setup done
+    2) Implement the additional pattern on java file, compile and build as a jar file
+    3) Upload the jar file to the lib folder, for example: 
+    - https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/StarbucksGUI/lib/starbucksyh.jar
+    4) Put the jar file to the processing folder, for example:
+    - processing\modes\java\libraries\starbucksyh\library\starbucksyh.jar
+    3) Restart the process IDE
+    4) Import the lib into processing
+    5) Update the starbucksGUI.pde for new screens and new patterns
+    6) Please update the development environment instruction once you have added a new jar file and notify the team to rebase
 
 ## Journal Week #1
 
@@ -141,7 +162,7 @@ What I have done this week
 
 - I got all the screens from professor's PDF of personal project
 - I worked out the size of the screen and the position mapping as listed on the PDF.
-      
+  ​    
       The height should same as the 500 in the size function
       
       int headerHeight=60;
@@ -176,10 +197,18 @@ What will I do do next week?
 
 ## Journal Week #4
 
-### Login Function (Yinghua Qin)
+### Login Function and Set Pin Function (Yinghua Qin)
 
 What I have done this week
-- I found a way to use the .jar file in processing. 
+- I found a way to add function to the existing starbuck project and integrate wih the starbuck jar
+- Implemented a "Set Pin" with Observer design pattern
+- copy the starbucksYH.jar to the processing folder: processing\modes\java\libraries\starbucksYH\library\starbucksYH.jar
+- copy the starbucks.jar to processing app folder: processing\modes\java\libraries\starbucks\library\starbucks.jar
+  -- import it into the processing app 
+
+![](./README.assets/1543289479053.png)
+
+
 
 What will I do do next week?
 
