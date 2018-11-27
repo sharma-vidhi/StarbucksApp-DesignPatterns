@@ -228,3 +228,25 @@ What will I do next week?
 - As this is the final sprint so there is no next week. 
 - There must be some feedback from the review and we might enhance it based on the feedback. 
 
+
+ **Activity Diagram**
+
+![ActivityDiagram](./3.UMLAnalysisModels/ActivityDiagram.png)
+
+
+## Use Case Diagram
+
+
+## Sequence Diagram of Set Pin - Observer Pattern
+
+#### Initial Setup
+
+![1543300184164](./3.UMLAnalysisModels/readme.assets/1543300184164.png)
+
+#### Set Pin Key Input
+
+![1543300295630](./3.UMLAnalysisModels/readme.assets/1543300295630.png)
+
+#### Set Pin 
+
+![1543300420465](./3.UMLAnalysisModels/readme.assets/1543300420465.png)
