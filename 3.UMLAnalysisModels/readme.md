@@ -30,5 +30,5 @@
 
 #### Set Pin 
 
-![1543300420465](C:\Yinghua\SJSU\2018Fall\CMPE202\temp\fa18-202-mystic\3.UMLAnalysisModels\readme.assets\1543300420465.png)
+![1543300420465](./readme.assets/1543300420465.png)
 
