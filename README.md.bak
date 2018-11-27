@@ -43,6 +43,7 @@ Additional Pattern Implementation - Processing Part
     8) Please update the development environment instruction once you have added a new jar file and notify the team to rebase
 
 Additional Pattern Implementation - Build the jar file
+
     1) Update the prof starbuck package name to self name, such as starbuckYH;
        You can use notepad++ to "replace in files" to replace "package starbuck" to "package starbuckXX", such as "package starbuckYH"
        change the folder name src->main->java->starbuck  to src->main->java->starbuckYH
