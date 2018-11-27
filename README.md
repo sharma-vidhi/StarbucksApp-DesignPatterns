@@ -56,31 +56,31 @@ Additional Pattern Implementation - Build the jar file
 
 **Activity Diagram**
 
-![ActivityDiagram](C:/Yinghua/SJSU/2018Fall/CMPE202/TeamProject/fa18-202-mystic/3.UMLAnalysisModels/ActivityDiagram.png)
+![ActivityDiagram](./3.UMLAnalysisModels/ActivityDiagram.png)
 
 ## Use Case Diagram
 
-![](C:/Yinghua/SJSU/2018Fall/CMPE202/TeamProject/fa18-202-mystic/3.UMLAnalysisModels/readme.assets/1543349096953.png)
+![](./3.UMLAnalysisModels/readme.assets/1543349096953.png)
 
 ## System Sequence Diagrams 
 
 ### Login and Set Pin
 
-![](./README.assets/1543350153375.png)
+![](./3.UMLAnalysisModels./README.assets/1543350153375.png)
 
 ## Sequence Diagram of Set Pin - Observer Pattern
 
 #### Initial Setup
 
-![1543300184164](C:/Yinghua/SJSU/2018Fall/CMPE202/TeamProject/fa18-202-mystic/3.UMLAnalysisModels/readme.assets/1543300184164.png)
+![1543300184164](./3.UMLAnalysisModels/readme.assets/1543300184164.png)
 
 #### Set Pin Key Input
 
-![1543300295630](C:/Yinghua/SJSU/2018Fall/CMPE202/TeamProject/fa18-202-mystic/3.UMLAnalysisModels/readme.assets/1543300295630.png)
+![1543300295630](./3.UMLAnalysisModels/readme.assets/1543300295630.png)
 
 #### Set Pin 
 
-![1543300420465](C:/Yinghua/SJSU/2018Fall/CMPE202/TeamProject/fa18-202-mystic/3.UMLAnalysisModels/readme.assets/1543300420465.png)
+![1543300420465](./3.UMLAnalysisModels/readme.assets/1543300420465.png)
 
 
 
