@@ -76,7 +76,14 @@ void draw() {
               text (cardcode, 20, 180, 270, 50);
               break;              
             case "MyCardsMoreOptions":
-              break;
+            	lines = app.screenContents().split("\n");
+		string ba = balance;
+		textAlign(CENTER);
+		fill(255,255,255,255);
+		text(ba,60,295,200,40);
+	    
+	    
+	    	break;
             case "MyCardsPay":
               break;
             case "Rewards":
