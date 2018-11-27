@@ -54,6 +54,36 @@ Additional Pattern Implementation - Build the jar file
        In the settings.gradle, change rootProject.name = 'starbucksYH'
     5) Using the original "gradlew jar" to build your jar file
 
+**Activity Diagram**
+
+![ActivityDiagram](C:/Yinghua/SJSU/2018Fall/CMPE202/TeamProject/fa18-202-mystic/3.UMLAnalysisModels/ActivityDiagram.png)
+
+## Use Case Diagram
+
+![](C:/Yinghua/SJSU/2018Fall/CMPE202/TeamProject/fa18-202-mystic/3.UMLAnalysisModels/readme.assets/1543349096953.png)
+
+## System Sequence Diagrams 
+
+### Login and Set Pin
+
+![](./README.assets/1543350153375.png)
+
+## Sequence Diagram of Set Pin - Observer Pattern
+
+#### Initial Setup
+
+![1543300184164](C:/Yinghua/SJSU/2018Fall/CMPE202/TeamProject/fa18-202-mystic/3.UMLAnalysisModels/readme.assets/1543300184164.png)
+
+#### Set Pin Key Input
+
+![1543300295630](C:/Yinghua/SJSU/2018Fall/CMPE202/TeamProject/fa18-202-mystic/3.UMLAnalysisModels/readme.assets/1543300295630.png)
+
+#### Set Pin 
+
+![1543300420465](C:/Yinghua/SJSU/2018Fall/CMPE202/TeamProject/fa18-202-mystic/3.UMLAnalysisModels/readme.assets/1543300420465.png)
+
+
+
 ## Journal Week #1
 
 ### Feasibilty experiments in Processing (Thol Chidambaram)
@@ -177,9 +207,10 @@ What I have done this week
   ​    
   ​    The height should same as the 500 in the size function
   ​    
-      int headerHeight=60;
-      int h=headerHeight+55*8;  //before:480; now: 500
-      
+  ​    int headerHeight=60;
+  ​    int h=headerHeight+55*8;  //before:480; now: 500
+  ​    
+
       size(320,500);  //480
 
 - Showcase for week 3
@@ -229,24 +260,4 @@ What will I do next week?
 - There must be some feedback from the review and we might enhance it based on the feedback. 
 
 
- **Activity Diagram**
-
-![ActivityDiagram](./3.UMLAnalysisModels/ActivityDiagram.png)
-
-
-## Use Case Diagram
-
-
-## Sequence Diagram of Set Pin - Observer Pattern
-
-#### Initial Setup
-
-![1543300184164](./3.UMLAnalysisModels/readme.assets/1543300184164.png)
-
-#### Set Pin Key Input
-
-![1543300295630](./3.UMLAnalysisModels/readme.assets/1543300295630.png)
-
-#### Set Pin 
-
-![1543300420465](./3.UMLAnalysisModels/readme.assets/1543300420465.png)
+ 
