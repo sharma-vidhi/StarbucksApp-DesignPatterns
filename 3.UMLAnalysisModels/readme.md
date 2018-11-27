@@ -11,3 +11,24 @@
  **Activity Diagram**
 
 ![ActivityDiagram](ActivityDiagram.png)
+
+
+
+## Use Case Diagram
+
+
+
+## Sequence Diagram of Set Pin - Observer Pattern
+
+#### Initial Setup
+
+![1543300184164](./readme.assets/1543300184164.png)
+
+#### Set Pin Key Input
+
+![1543300295630](./readme.assets/1543300295630.png)
+
+#### Set Pin 
+
+![1543300420465](C:\Yinghua\SJSU\2018Fall\CMPE202\temp\fa18-202-mystic\3.UMLAnalysisModels\readme.assets\1543300420465.png)
+
