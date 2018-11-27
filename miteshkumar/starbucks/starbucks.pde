@@ -17,6 +17,7 @@ int w=320;
 int h=headerHeight+55*8;//before:480; now: 500
 IApp app = new AppAuthProxy() ;
 String[] lines ;
+String balance = "$0.00";
 void setup() {
 
 
@@ -61,7 +62,7 @@ void draw() {
               break;
             case "MyCards":  
               lines = app.screenContents().split("\n");
-              String balance=lines[7];
+              balance=lines[7];
                       textAlign(CENTER);
                       fill(255, 255, 255, 255);
                       //text (balance, 20, 160, 270, 50);
@@ -76,7 +77,13 @@ void draw() {
               text (cardcode, 20, 180, 270, 50);
               break;              
             case "MyCardsMoreOptions":
-              break;
+              
+            	lines = app.screenContents().split("\n");
+		          String ba = balance; 
+		          textAlign(CENTER);
+		          fill(255,255,255,255);
+		          text(ba,150,80,200,40);
+	    	break;
             case "MyCardsPay":
               break;
             case "Rewards":
