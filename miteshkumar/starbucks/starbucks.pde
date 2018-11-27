@@ -100,74 +100,7 @@ void draw() {
     }
 
 }
-void draw_myCardsPay() {
- 
 
-  textSize(32);
-  String screen=app.screen();
-  int sIndex=Arrays.asList(screens).indexOf(screen);
-  background(screenImages[sIndex]);
-  //System.out.print(screen);
-  switch(screen) 
-        { 
-            case "PinScreen":
-                PinEntryMachine pm;
-                pm=app.getPinEntryMachin();
-                pinInput=pm.d1()+pm.d2()+pm.d3()+pm.d4();            
-                fill(0, 102, 153, 204);
-                for (int i =0; i < min(pinInput.length(),4); i++) {
-                  text (pinInput.substring(i,i+1), 40+i*70, 90, 50, 50);
-                }
-              
-              lines = app.screenContents().split("\n");
-              if(lines[3].trim().equals("Invalid Pin")){
-                      textSize(18);
-                      textAlign(CENTER);
-                      fill(255, 255, 255, 255);
-                      text ("Invalid Pin", 20, 160, 270, 50);
-              }
-              break;
-            case "MyCards":  
-              lines = app.screenContents().split("\n");
-              String balance=lines[7];
-                      textAlign(CENTER);
-                      fill(255, 255, 255, 255);
-                      //text (balance, 20, 160, 270, 50);
-                      text (balance, 60, 295, 200, 40);
-              
-              break;  
-            case "AddCard":
-              lines = app.screenContents().split("\n"); 
-              String cardId=lines[4].trim().replace("[","").replace("]",""); //assertEquals("[123456789]", lines[4].trim()); 
-              String cardcode=lines[5].trim().replace("[","").replace("]",""); //assertEquals("[999]", lines[5].trim());
-              text (cardId, 20, 160, 270, 50);
-              text (cardcode, 20, 180, 270, 50);
-              break;              
-            case "MyCardsMoreOptions":
-              break;
-            case "MyCardsPay":
-              break;
-            case "Rewards":
-              break;
-            case "Settings":
-              break;
-            case "Store":
-              break;
-            case "Payments":
-              break;
-             
-        }
-     if (debug) {
-       fill(0, 102, 153);
-      textSize(25);
-      textAlign(LEFT);
-      fill(255, 255, 255, 255);
-      //text (mouseX + " : " + mouseY, 0, 20, 270, 50);
-      text ("-"+kx+"-"+ky+"-", 0, 20, 270, 50);
-      
-    }
-
-}
 
 void mousePressed() {
   //int x = 0;
