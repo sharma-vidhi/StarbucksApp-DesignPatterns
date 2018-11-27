@@ -20,7 +20,7 @@
 
 ## System Sequence Diagrams 
 
-### Set Pin
+### Login and Set Pin
 
 ![](./readme.assets/1543350153375.png)
 
