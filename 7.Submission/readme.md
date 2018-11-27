@@ -15,8 +15,8 @@ Starbucks Mobile App on Processing
 ### A summary of areas of contributions (for each team member)
 - Yinghua Qin
 
-  - Login function
-  - Set-pin function
+  - Login function  (State Pattern)
+  - Set-pin function  (Observer Pattern)
   - UML diagrams (Activity, Use Case, Sequence, Domain)
 
 Tasks of Week 1,2          |  Tasks of Week 3,4
