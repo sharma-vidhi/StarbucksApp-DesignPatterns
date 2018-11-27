@@ -218,6 +218,7 @@ What I have done this week
 
 ![](./README.assets/1543289479053.png)
 
+![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/yinghua_qin/setpin.gif)
 
 
 What will I do next week?
