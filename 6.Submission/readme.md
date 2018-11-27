@@ -31,7 +31,7 @@ https://github.com/nguyensjsu/fa18-202-mystic/projects/2
 
 ### Link to your team's Project Journal (on GitHub)
 
-https://github.com/nguyensjsu/fa18-202-mystic/blob/master/Journal.md
+https://github.com/nguyensjsu/fa18-202-mystic/blob/master/README.md
 
 ### Link to your team's Google Sprint Task Sheet
 
