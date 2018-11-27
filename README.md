@@ -37,10 +37,10 @@ Additional Pattern Implementation
     - https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/StarbucksGUI/lib/starbucksyh.jar
     4) Put the jar file to the processing folder, for example:
     - processing\modes\java\libraries\starbucksyh\library\starbucksyh.jar
-    3) Restart the process IDE
-    4) Import the lib into processing
-    5) Update the starbucksGUI.pde for new screens and new patterns
-    6) Please update the development environment instruction once you have added a new jar file and notify the team to rebase
+    5) Restart the process IDE
+    6) Import the lib into processing
+    7) Update the starbucksGUI.pde for new screens and new patterns
+    8) Please update the development environment instruction once you have added a new jar file and notify the team to rebase
 
 ## Journal Week #1
 
@@ -163,8 +163,8 @@ What I have done this week
 - I got all the screens from professor's PDF of personal project
 - I worked out the size of the screen and the position mapping as listed on the PDF.
   ​    
-      The height should same as the 500 in the size function
-      
+  ​    The height should same as the 500 in the size function
+  ​    
       int headerHeight=60;
       int h=headerHeight+55*8;  //before:480; now: 500
       
@@ -200,15 +200,16 @@ What will I do do next week?
 ### Login Function and Set Pin Function (Yinghua Qin)
 
 What I have done this week
-- I found a way to add function to the existing starbuck project and integrate wih the starbuck jar
 - Implemented a "Set Pin" with Observer design pattern
-- copy the starbucksYH.jar to the processing folder: processing\modes\java\libraries\starbucksYH\library\starbucksYH.jar
-- copy the starbucks.jar to processing app folder: processing\modes\java\libraries\starbucks\library\starbucks.jar
-  -- import it into the processing app 
+- Compile and build the starbucksYH.jar
+- Updated the development environment setup instruction
 
 ![](./README.assets/1543289479053.png)
 
 
 
-What will I do do next week?
+What will I do next week?
+
+- As this is the final sprint so there is no next week. 
+- There must be some feedback from the review and we might enhance it based on the feedback. 
 
