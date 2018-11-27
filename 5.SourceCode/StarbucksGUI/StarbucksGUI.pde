@@ -8,7 +8,7 @@ import java.awt.Point;
 import java.util.Arrays;
 
 
-boolean debug=true;
+boolean debug=false;
 String[] screens = { "PinScreen", "MyCards", "AddCard", "MyCardsOptions","MyCardsMoreOptions", "MyCardsPay", "Rewards","Settings", "Store","Payments","SetPin"};
 PImage[] screenImages = new PImage[screens.length];
 
