@@ -41,12 +41,12 @@ void setup() {
   
   for (int i = 0; i<keypadButtons.length; i++)
   {
-    keypadButtonImages[i] = loadImage("/keypadButtons/AddCard/"+keypadButtons[i]+".jpg");
-    keypadButtonImages[i].resize(106,56);
-    keypadButtonRollImages[i] = loadImage("/keypadButtons/AddCard/"+keypadButtons[i]+"Roll.png");
-    keypadButtonRollImages[i].resize(106,56);
-    keypadButtonDownImages[i] = loadImage("/keypadButtons/AddCard/"+keypadButtons[i]+"Down.png");
-    keypadButtonDownImages[i].resize(106,56);
+    keypadButtonImages[i] = loadImage("/keypadButtons/AddCard/new/"+keypadButtons[i]+".png");
+   // keypadButtonImages[i].resize(106,56);
+    keypadButtonRollImages[i] = loadImage("/keypadButtons/AddCard/new/"+keypadButtons[i]+"Roll.png");
+   // keypadButtonRollImages[i].resize(106,56);
+    keypadButtonDownImages[i] = loadImage("/keypadButtons/AddCard/new/"+keypadButtons[i]+"Down.png");
+   // keypadButtonDownImages[i].resize(106,56);
     
     keypadButtonImagesPS[i] = loadImage("/keypadButtons/PinScreen/"+keypadButtons[i]+".png");
     keypadButtonImagesPS[i].resize(106,56);
@@ -168,6 +168,17 @@ void draw() {
 
 }
 
+boolean overMyCardsPayCircle() {
+  float disX = 270 - mouseX;
+  float disY = 225 - mouseY;
+  int diameter = 60;
+  if (sqrt(sq(disX) + sq(disY)) < diameter/2 ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 void mousePressed() {
   //int x = 0;
   //int y = 260;
@@ -187,6 +198,22 @@ void mousePressed() {
   //boolean kpzone= ( ky > 4 && ky<9 && kx<=3 && kx>=1 );
   //boolean tzone= (fullScreen || ky <= 4 );
    
+  if (app.screen().equals("MyCards")) {
+    if ((kx == 2 && ky == 4) || (kx == 3 && ky == 3)) {
+      kx = 1;  // set to some random keys
+      ky = 4;  
+    }
+    if ( mouseX >= 60 && mouseX <= 260 &&
+      mouseY >= 295 && mouseY <= 370) { 
+      kx = 2;
+      ky = 4;
+    }
+    
+    if (overMyCardsPayCircle()){
+      kx = 3;
+      ky = 3;
+    }    
+  }
 
   if((kx>=1 && kx<=kpRowColumn.x) && (ky>=1 && ky<=kpRowColumn.y)) {
     app.touch(kx,ky);
@@ -211,10 +238,4 @@ void mousePressed() {
     if(kx==3 && ky==1) app.next();
   }
 
-}
-
-void loadKeypad()
-{
-  
-  
 }
