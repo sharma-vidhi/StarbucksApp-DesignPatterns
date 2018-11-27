@@ -29,7 +29,7 @@ Development environment setup instruction (Updated to V2 at November 26, 2018)
     
     6) Start to update the starbucksGUI.pde for existing screens and commit the changes
 
-Additional Pattern Implementation
+Additional Pattern Implementation - Processing Part
 
     1) Get the above environment setup done
     2) Implement the additional pattern on java file, compile and build as a jar file
@@ -41,6 +41,17 @@ Additional Pattern Implementation
     6) Import the lib into processing
     7) Update the starbucksGUI.pde for new screens and new patterns
     8) Please update the development environment instruction once you have added a new jar file and notify the team to rebase
+
+Additional Pattern Implementation - Build the jar file
+    1) Update the prof starbuck package name to self name, such as starbuckYH;
+       You can use notepad++ to "replace in files" to replace "package starbuck" to "package starbuckXX", such as "package starbuckYH"
+       change the folder name src->main->java->starbuck  to src->main->java->starbuckYH
+                              src->test->java->starbuck  to src->test->java->starbuckYH
+    2) Re-import the project into eclipse. you will see all your src code package will change to self name.
+    3) Update AppSuthProxy.java, set public to "public boolean authenticated = false ;". It is used for team member jar auth status update.
+    4) In the build.gradle file, change baseName = 'starbucks' to baseName = 'starbucksYH'
+       In the settings.gradle, change rootProject.name = 'starbucksYH'
+    5) Using the original "gradlew jar" to build your jar file
 
 ## Journal Week #1
 
