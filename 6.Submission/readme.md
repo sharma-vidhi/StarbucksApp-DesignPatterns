@@ -19,7 +19,7 @@ Starbucks Mobile App on Processing
   - Set-pin function
   - UML diagrams (Activity, Use Case, Sequence, Domain)
 
-Tasks                      |  Tasks
+Tasks of Week 1,2          |  Tasks of Week 3,4
 :-------------------------:|:-------------------------:
 ![](./readme.assets/1543351854269.png)  |  ![](./readme.assets/1543351793435.png)
 
