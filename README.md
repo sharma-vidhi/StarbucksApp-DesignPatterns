@@ -82,7 +82,6 @@ Additional Pattern Implementation - Build the jar file
 
 ![1543300420465](./3.UMLAnalysisModels/readme.assets/1543300420465.png)
 
-
 ----------------------
 ## Journal Week #1
 -----------------------
@@ -217,7 +216,6 @@ To do:
 - Adding the wow factor, trying to adding "Feature Model"
 - Testing the complete flow
 
-
 -------------------------
 ## Journal Week #3
 ---------------------------
@@ -295,10 +293,9 @@ To do:
 
 What I have done this week
 - Implemented a "Set Pin" with Observer design pattern
-- Compile and build the starbucksYH.jar
-- Updated the development environment setup instruction
+- Implemented the multiple app Visitor design pattern
 
-![](./README.assets/1543289479053.png)
+![](./README.assets/1543425658654.png)
 
 ##### Set Pin Showcase
 
@@ -320,4 +317,4 @@ To do:
 
 
 
- 
+
