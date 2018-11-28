@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 
 boolean debug=true;
+float a = 95;
 String[] screens = { "PinScreen", "MyCards", "AddCard", "MyCardsOptions","MyCardsMoreOptions", "MyCardsPay", "Rewards","Settings", "Store","Payments"};
 String[] keypadButtons = { "One", "Two", "Three", "Four","Five", "Six", "Seven","Eight", "Nine","Spacer","Zero","BackSpace"};
 PImage[] screenImages = new PImage[screens.length];
@@ -21,7 +22,8 @@ int kx,ky;
 int headerHeight=60;
 
 PFont font;
-
+PImage screenBlur;
+PImage mycardPayTouch;
 
 String pin = "1234";
 String pinInput = "";
@@ -40,6 +42,10 @@ void setup() {
     screenImages[i] = loadImage("/Images/"+screens[i]+".jpg");
     screenImages[i].resize(w,h);
   }
+  screenBlur = loadImage("/Images/MyCardsPayBlur.png");
+  screenBlur.resize(w,h);
+  mycardPayTouch = loadImage("/Images/MyCardsPayTouch.png");
+  mycardPayTouch.resize(w,h);
   
   for (int i = 0; i<keypadButtons.length; i++)
   {
@@ -94,7 +100,7 @@ void draw() {
   textSize(32);
   String screen=app.screen();
   int sIndex=Arrays.asList(screens).indexOf(screen);
-  background(screenImages[sIndex]);
+    background(screenImages[sIndex]);
   //System.out.print(screen);
   switch(screen) 
         { 
@@ -121,6 +127,7 @@ void draw() {
               }
               break;
             case "MyCards":  
+              a = 95;
               lines = app.screenContents().split("\n");
                balance=lines[7];
                       textAlign(CENTER);
@@ -156,11 +163,24 @@ void draw() {
               lines = app.screenContents().split("\n");
               cardId =lines[6].trim().replace("[","").replace("]","");           
               textAlign(CENTER);
-              fill(153);
+              fill(50);
               //text (balance, 20, 160, 270, 50);
-              textSize(20);
-              text (cardId, 75, 85, 225, 85);  
-                      
+              //textSize(20);
+              text (cardId, 75, 91, 225, 91);  
+               if(kx==2 && (ky == 4) || (ky == 5) || (ky == 6))
+               {
+                 background(screenBlur);
+                 textSize(20);
+                 text (cardId, 75, 91, 225, 91); 
+                 strokeWeight(3);
+                 line(a, 110, a, 182);
+                 a = a + 3.5;
+                if (a > 275) { 
+                  background(mycardPayTouch); 
+                  kx = 3;
+                }
+                
+               }
             
               break;
             case "Rewards":
@@ -178,8 +198,8 @@ void draw() {
       textSize(25);
       textAlign(LEFT);
       fill(255, 255, 255, 255);
-     // text (mouseX + " : " + mouseY, 0, 20, 270, 50);
-     // text ("-"+kx+"-"+ky+"-", 0, 20, 270, 50);
+      //text (mouseX + " : " + mouseY, 0, 20, 270, 50);
+      //text ("-"+kx+"-"+ky+"-", 0, 20, 270, 50);
       
     }
 
