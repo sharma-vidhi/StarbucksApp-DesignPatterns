@@ -131,7 +131,24 @@ What will I do do next week?
 - Create Buttons in Settings screen for a better user experience
 - Implement the screen redirection functionality from settings to AddCard
 
+
+### Experimenting with Processing (Vidhi)
+
+Work Done:
+
+- Finalized the design for the project
+- Divided the tasks
+- worked on Proceesing tutorials like image loading, mouse and key press events 
+
+To do:
+
+- Implemening MyCards and MyCardsPay screens
+- Adding events to the buttons on the screen
+- Merging Java and processing code
+
+------------------------
 ## Journal Week #2
+-------------------------
 
 ### Login Function (Yinghua Qin)
 
@@ -186,8 +203,24 @@ What will I do do next week?
 - Create fields for cardnumber and cvv code using processing
 - Write logic to convert keypad touch event to starbucks app touch event 
 
+### MyCards/MyCardsPay Screen (Vidhi)
 
+Work Done:
+
+- Modified screen image's in accordance to the requirement
+- Implemented MyCards and MyCardsPay screens
+- Added events to the buttons on the screen
+- Merged Java and processing code
+
+To do:
+
+- Adding the wow factor, trying to adding "Feature Model"
+- Testing the complete flow
+
+
+-------------------------
 ## Journal Week #3
+---------------------------
 
 ### Login Function (Yinghua Qin)
 
@@ -238,7 +271,25 @@ What will I do do next week?
 - Come up with ideas to improve user experience
 - Work with team members and integrate the code
 
+### MyCards/MyCardsPay Screen, Faeture Model (Vidhi)
+
+Work Done: 
+
+- Did required filtering  MyCards and MyCardsPay 
+- Learnt to convert processing files into java code and implementing processing into ecplise (by adding processing jar's)
+- Tried to add feature model but was not successful(I was not able to merge the processing jar and the aspect jar's and run the complete project as a whole)
+
+To do:
+
+- Create Ad youtube video
+- Implement Builder Pattern for order 
+- Create a  screen for order
+- Adding events to the order screen 
+- Documentation
+
+---------------------
 ## Journal Week #4
+----------------------
 
 ### Login Function and Set Pin Function (Yinghua Qin)
 
@@ -258,6 +309,15 @@ What will I do next week?
 
 - As this is the final sprint so there is no next week. 
 - There must be some feedback from the review and we might enhance it based on the feedback. 
+
+### Order feature(Builder Pattern, Screen), Video, Documentation (Vidhi)
+To do:
+- Working on Builder pattern
+- designing order screen
+- Video
+- Documentation
+
+
 
 
  
