@@ -1,4 +1,4 @@
-import starbucks.*;
+import starbucks.*; //<>//
 import java.awt.Point;
 import java.util.Arrays;
 
@@ -160,9 +160,11 @@ void draw() {
               text(ba,150,80,200,40);
               break;
             case "MyCardsPay":
+              font = loadFont("SegoeUI-Semibold-18.vlw");
               lines = app.screenContents().split("\n");
               cardId =lines[6].trim().replace("[","").replace("]","");           
               textAlign(CENTER);
+              textFont(font);
               fill(50);
               //text (balance, 20, 160, 270, 50);
               //textSize(20);
@@ -178,6 +180,7 @@ void draw() {
                 if (a > 275) { 
                   background(mycardPayTouch); 
                   kx = 3;
+                  loadDefaultFont();
                 }
                 
                }
@@ -260,7 +263,7 @@ void mousePressed() {
   Point menuSize=new Point(w/5,55);
   boolean hasMenu=(!app.screen().equals("PinScreen") && !app.screen().equals("AddCard"));
   if(hasMenu && ky==8) {
-       char mA='A'; //<>//
+       char mA='A';
        int mIndex=((int)(mouseX - kpLeftTop.x))/((int)menuSize.x);
        char mTrigger=(char)((int)mA+mIndex);
        app.execute(String.valueOf(mTrigger)) ;
