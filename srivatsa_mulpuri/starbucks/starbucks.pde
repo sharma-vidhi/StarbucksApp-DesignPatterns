@@ -130,8 +130,10 @@ void draw() {
             case "MyCards":  
               a = 95;
               fill(255,255,255);
+              font = loadFont("Georgia-50.vlw");
               lines = app.screenContents().split("\n");
                balance=lines[7];
+               textFont(font);
                       textAlign(CENTER);
                       
                       //text (balance, 20, 160, 270, 50);
