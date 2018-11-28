@@ -83,8 +83,24 @@ Additional Pattern Implementation - Build the jar file
 ![1543300420465](./3.UMLAnalysisModels/readme.assets/1543300420465.png)
 
 
-
+----------------------
 ## Journal Week #1
+-----------------------
+
+### Login Function (Yinghua Qin)
+
+What I have done this week
+
+- I started from looking at some examples of the Processing. 
+- Building UI and annimation on processing seems simple. 
+- Showcase for week 1
+
+What I plan to do next week
+
+- How to import my individual project Java files to Processing so that I could reuse the source code? 
+- Which design patterns I should implement on Login function? The state machine? The observation? Those are implemented on the individual project. 
+- Would it be cool to create a QR code scan for login on Processing? It seems there is a QR code scan lib avaiable. 
+- Would it be cool to add sound when login fail and a happy sound when login success? 
 
 ### Feasibilty experiments in Processing (Thol Chidambaram)
 
@@ -103,21 +119,6 @@ What I plan to do next week
 - Check the possibility of Features IDE modeling using AspectJ for feature selection.
 - How should I implement MyCards page to MyCardsOptions navigations? which pattern should I use?
 
-### Login Function (Yinghua Qin)
-
-What I have done this week
-
-- I started from looking at some examples of the Processing. 
-- Building UI and annimation on processing seems simple. 
-- Showcase for week 1
-
-What I plan to do next week
-
-- How to import my individual project Java files to Processing so that I could reuse the source code? 
-- Which design patterns I should implement on Login function? The state machine? The observation? Those are implemented on the individual project. 
-- Would it be cool to create a QR code scan for login on Processing? It seems there is a QR code scan lib avaiable. 
-- Would it be cool to add sound when login fail and a happy sound when login success? 
-
 ### AddCard Functionality (Srivatsa Mulpuri)
 
 What I have done this week
@@ -130,7 +131,6 @@ What will I do do next week?
 - Integrate the personal project source code for Settings and Add Card Functionalities
 - Create Buttons in Settings screen for a better user experience
 - Implement the screen redirection functionality from settings to AddCard
-
 
 ### Experimenting with Processing (Vidhi)
 
@@ -300,7 +300,7 @@ What I have done this week
 
 ![](./README.assets/1543289479053.png)
 
-#### Set Pin Showcase
+##### Set Pin Showcase
 
 ![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/yinghua_qin/setpin.gif)
 
