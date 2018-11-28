@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 
 boolean debug=true;
+boolean enablePay = false;
 float a = 95;
 String[] screens = { "PinScreen", "MyCards", "AddCard", "MyCardsOptions","MyCardsMoreOptions", "MyCardsPay", "Rewards","Settings", "Store","Payments"};
 String[] keypadButtons = { "One", "Two", "Three", "Four","Five", "Six", "Seven","Eight", "Nine","Spacer","Zero","BackSpace"};
@@ -128,13 +129,14 @@ void draw() {
               break;
             case "MyCards":  
               a = 95;
+              fill(255,255,255);
               lines = app.screenContents().split("\n");
                balance=lines[7];
                       textAlign(CENTER);
-                      fill(255, 255, 255, 255);
+                      
                       //text (balance, 20, 160, 270, 50);
-                      text (balance, 60, 295, 200, 40);
-              
+                      text (balance, 160, 330);
+                      //loadDefaultFont();
               break;  
             case "AddCard":
               for (int i = 0; i<keypadButtons.length; i++)
@@ -181,6 +183,11 @@ void draw() {
                   background(mycardPayTouch); 
                   kx = 3;
                   loadDefaultFont();
+                  if(enablePay)
+                  {
+                   invokePay();
+                   enablePay = false;
+                  }
                 }
                 
                }
@@ -201,7 +208,7 @@ void draw() {
       textSize(25);
       textAlign(LEFT);
       fill(255, 255, 255, 255);
-      //text (mouseX + " : " + mouseY, 0, 20, 270, 50);
+      text (mouseX + " : " + mouseY, 0, 20, 270, 50);
       //text ("-"+kx+"-"+ky+"-", 0, 20, 270, 50);
       
     }
@@ -237,11 +244,16 @@ void mousePressed() {
   
   //boolean kpzone= ( ky > 4 && ky<9 && kx<=3 && kx>=1 );
   //boolean tzone= (fullScreen || ky <= 4 );
-   
+     if (app.screen().equals("Settings")) {
+       if ((kx == 1 || kx == 2 || kx == 3) && (ky == 1 || ky == 2 || ky == 3)) {
+                kx = 2;  // set to some random keys
+                ky = 1;  
+              }
+     }
   if (app.screen().equals("MyCards")) {
     if ((kx == 2 && ky == 4) || (kx == 3 && ky == 3)) {
       kx = 1;  // set to some random keys
-      ky = 4;  
+      ky = 4; 
     }
     if ( mouseX >= 60 && mouseX <= 260 &&
       mouseY >= 295 && mouseY <= 370) { 
@@ -252,6 +264,7 @@ void mousePressed() {
     if (overMyCardsPayCircle()){
       kx = 3;
       ky = 3;
+      enablePay = true;
     }    
   }
 
@@ -285,4 +298,9 @@ void loadDefaultFont()
 {
  font = loadFont("SansSerif.plain-20.vlw");
  textFont(font);
+}
+
+void invokePay()
+{
+ app.touch(2,2); 
 }
