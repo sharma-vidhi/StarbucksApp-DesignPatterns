@@ -9,7 +9,7 @@ Work Done:
 - worked on Proceesing tutorials like image loading, mouse and key press events 
 
 To do:
-- Implemening My cards options and my cards more options screens
+- Implemening MyCards and MyCardsPay screens
 - Adding events to the buttons on the screen
 - Merging Java and processing code
 -------------------------
@@ -19,14 +19,37 @@ To do:
 ##### Week 2
 -----------------------
 Work Done:
-- Implemented My cards options and my cards more options screens
+- Modified screen image's in accordance to the requirement
+- Implemented MyCards and MyCardsPay screens
 - Added events to the buttons on the screen
 - Merged Java and processing code
 
-
 To do:
 - Adding the wow factor, trying to adding "Feature Model"
-- Integration testing
+- Testing the complete flow
 -------------------------
 
+##### Week 3
+-----------------------
+Work Done: 
+- Did required filtering  MyCards and MyCardsPay 
+- Learnt to convert processing files into java code and implementing processing into ecplise (by adding processing jar's)
+- Tried to add feature model but was not successful(I was not able to merge the processing jar and the aspect jar's and run the complete project as a whole)
+
+To do:
+- Create Ad youtube video
+- Implement Builder Pattern for order 
+- Create a  screen for order
+- Adding events to the order screen 
+- Documentation
+-----------------------
+
+##### Week 4
+-----------------------
+Work:
+- Working on Builder pattern
+- designing order screen
+
+
+------------------------
 
