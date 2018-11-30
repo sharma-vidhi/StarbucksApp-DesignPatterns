@@ -82,6 +82,12 @@ Additional Pattern Implementation - Build the jar file
 
 ![1543300420465](./3.UMLAnalysisModels/readme.assets/1543300420465.png)
 
+## Class Diagram
+
+#### Order- Builder Pattern
+
+![](https://user-images.githubusercontent.com/17009702/49313115-230d9100-f49b-11e8-9266-c70c740d3f8a.png)
+
 ----------------------
 ## Journal Week #1
 -----------------------
