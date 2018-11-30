@@ -14,5 +14,7 @@ class Order {
 		starbucksBuilder.createStarbucks();
 		starbucksBuilder.buildDrink();
 		starbucksBuilder.buildSize();
+		starbucksBuilder.buildMilk();
+		starbucksBuilder.buildFalvour();
 	}
 }
