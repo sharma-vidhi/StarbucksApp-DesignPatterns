@@ -35,6 +35,11 @@ Tasks of Week 1,2          |  Tasks of Week 3,4
   - Screen Design (Set pin, Add Card, Keypad, Settings using processing)
   - Created fonts for displaying content in different screens
   - Implemented Pin Selection, Add Card, Setting functionalities in processing
+  
+  Tasks of Week 1,2          |  Tasks of Week 3,4
+:-------------------------:|:-------------------------:
+![](./readme.assets/taskBoardSrivatsa.JPG)  |  ![](./readme.assets/1543351793435.png)
+
 
 ### Link to your team's GitHub Repo (*)
 
