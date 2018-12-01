@@ -1,4 +1,7 @@
- //<>//
+import starbucksSM.*; //<>//
+
+import starbucksSM.*;
+
 import starbucks.*;
 
 //Each of us need to import our jar file here
@@ -13,7 +16,7 @@ int rectX, rectY, rectWidth, rectHeight;
 boolean rectOver = false;
 boolean debug=true;
 boolean enablePay = false;
-boolean pinSelected = true;
+boolean pinSelected = false;
 boolean overFour = false;
 boolean overSix = false;
 boolean overZero = false;
@@ -21,6 +24,10 @@ boolean overZero = false;
 float a = 95;
 
 color buttontHighlight;
+color pinBackground;
+color fourPinBackground;
+color sixPinBackground;
+color zeroPinBackground;
 
 String[] screens = { "PinScreen", "MyCards", "AddCard", "MyCardsOptions","MyCardsMoreOptions", "MyCardsPay", "Rewards","Settings", "Store","Payments","SetPin"};
 String[] keypadButtons = { "One", "Two", "Three", "Four","Five", "Six", "Seven","Eight", "Nine","Spacer","Zero","BackSpace"};
@@ -51,6 +58,9 @@ starbucks.AppAuthProxy app = new starbucks.AppAuthProxy() ;
 
 // Each of us need to add our app here
 starbucksYH.AppAuthProxy appYH=new starbucksYH.AppAuthProxy();
+starbucksSM.AppAuthProxy appSM=new starbucksSM.AppAuthProxy();
+
+starbucksSM.PinEntryMachine pm;
 
 String[] lines ;
 String balance = "$0.00";
@@ -64,7 +74,9 @@ void setup() {
   rectWidth = 100;
   rectHeight = 30;
   buttontHighlight = color(49,49,49);
+  pinBackground = color(76,76,76);
   // Make a new instance of a PImage by loading an image file
+  
   for (int i=0; i < screens.length; i++) {
     screenImages[i] = loadImage("/Images/"+screens[i]+".jpg");
     screenImages[i].resize(w,h);
@@ -73,8 +85,8 @@ void setup() {
   screenBlur.resize(w,h);
   mycardPayTouch = loadImage("/Images/MyCardsPayTouch.png");
   mycardPayTouch.resize(w,h);
-  pinSelect = loadImage("/Images/PinSetting.jpg");
-  pinSelect.resize(w,h);
+  //pinSelect = loadImage("/Images/PinSetting.jpg");
+  //pinSelect.resize(w,h);
   
   for (int i = 0; i<keypadButtons.length; i++)
   {
@@ -128,11 +140,11 @@ void draw() {
 
   
   textSize(32);
-  String screen=app.screen();
+  String screen=appSM.screen();
   int sIndex=Arrays.asList(screens).indexOf(screen);
   background(screenImages[sIndex]);
   
-  update(mouseX, mouseY);
+  update();
   //System.out.print(screen);
   switch(screen) 
         { 
@@ -145,15 +157,16 @@ void draw() {
                     keypadImageButtonsPS[i].update();
                     keypadImageButtonsPS[i].display();
                   }
-                starbucksYH.PinEntryMachine pm;
-                pm=appYH.getPinEntryMachin();
+                  //YH
+                
+                pm=appSM.getPm();
                 pinInput=pm.d1()+pm.d2()+pm.d3()+pm.d4();            
                 fill(0, 102, 153, 204);
                 for (int i =0; i < min(pinInput.length(),4); i++) {
                   text (pinInput.substring(i,i+1), 40+i*70, 90, 50, 50);
                 }
-              
-              lines = appYH.screenContents().split("\n");
+              //YH
+              lines = appSM.screenContents().split("\n");
               if(lines[3].trim().equals("Invalid Pin")){
                       textSize(18);
                       textAlign(CENTER);
@@ -163,29 +176,39 @@ void draw() {
               break;
 
             case "SetPin":  //Yinghua project
-              if(pinSelected)
-              {
-                lines = appYH.screenContents().split("\n");
-                pin=lines[5].trim().replace("[","").replace("]","");
+                //lines = appSM.screenContents().split("\n");
+                //pin=lines[5].trim().replace("[","").replace("]","");
+                //fill(0, 102, 153, 204);
+                //for (int i =0; i < min(pin.length(),4); i++) {
+                //  text (pin.substring(i,i+1), 40+i*70, 90, 50, 50);
+                //} 
+                for (int i = 0; i<keypadButtons.length; i++)
+                  {
+                    keypadImageButtonsPS[i].update();
+                    keypadImageButtonsPS[i].display();
+                  }
+                pm=appSM.getPm();
+                pinInput=pm.d1()+pm.d2()+pm.d3()+pm.d4();            
                 fill(0, 102, 153, 204);
-                for (int i =0; i < min(pin.length(),4); i++) {
-                  text (pin.substring(i,i+1), 40+i*70, 90, 50, 50);
-                } 
-              }
-              else
-              {
+                for (int i =0; i < min(pinInput.length(),4); i++) {
+                  text (pinInput.substring(i,i+1), 40+i*70, 90, 50, 50);
+                }
                 //background(pinSelect);
                 pinOptions();
+                if(kx==2 && ky==4)
                 sixPins();
+                //if(overFour)
+                //background("SetPin.jpg");
                 
-              }
+                
+              
               break;
 
             case "MyCards":  
               a = 95;
               fill(255,255,255);
               font = loadFont("Georgia-50.vlw");
-              lines = app.screenContents().split("\n");
+              lines = appSM.screenContents().split("\n");
               balance=lines[7];
               textFont(font);
               textAlign(CENTER);
@@ -202,7 +225,7 @@ void draw() {
                 keypadImageButtons[i].display();
               }
               font = loadFont("YuGothic-Bold-20.vlw");
-              lines = app.screenContents().split("\n"); 
+              lines = appSM.screenContents().split("\n"); 
               String cardId=lines[4].trim().replace("[","").replace("]",""); //assertEquals("[123456789]", lines[4].trim()); 
               String cardcode=lines[5].trim().replace("[","").replace("]",""); //assertEquals("[999]", lines[5].trim());
               textFont(font);
@@ -213,7 +236,7 @@ void draw() {
               break;            
              
             case "MyCardsMoreOptions":
-              lines = app.screenContents().split("\n");
+              lines = appSM.screenContents().split("\n");
               String ba = balance; 
               textAlign(CENTER);
               fill(255,255,255,255);
@@ -221,7 +244,7 @@ void draw() {
               break;
             case "MyCardsPay":
             font = loadFont("SegoeUI-Semibold-18.vlw");
-              lines = app.screenContents().split("\n");
+              lines = appSM.screenContents().split("\n");
               cardId =lines[6].trim().replace("[","").replace("]","");           
               textAlign(CENTER);
               textFont(font);
@@ -262,32 +285,32 @@ void draw() {
         }
         
           //Synchronize the screen in all apps
-          switch (screen) {
-            case "PinScreen":
-                if(appYH.screen().equals("PinScreen"))  
-                    app.authenticated=false;
-                //else if(appYH.screen().equals("MyCards"))  app.execute("A");
-                else
-                if(!appYH.screen().equals("PinScreen")) {
-                    app.authenticated=true;app.execute("A");
-                }
-            break;
-          case "SetPin":
-            if(appYH.screen().equals("Settings")) 
-                  app.execute("E");
-           if(appYH.screen().equals("PinScreen"))  
-                    app.authenticated=false;
-            break;
-          }
+          //switch (screen) {
+          //  case "PinScreen":
+          //      if(appYH.screen().equals("PinScreen"))  
+          //          app.authenticated=false;
+          //      //else if(appYH.screen().equals("MyCards"))  app.execute("A");
+          //      else
+          //      if(!appYH.screen().equals("PinScreen")) {
+          //          app.authenticated=true;app.execute("A");
+          //      }
+          //  break;
+          //case "SetPin":
+          //  if(appYH.screen().equals("Settings")) 
+          //        app.execute("E");
+          // if(appYH.screen().equals("PinScreen"))  
+          //          app.authenticated=false;
+          //  break;
+          //}
         
   if (debug) {
        fill(0, 102, 153);
       textSize(25);
       textAlign(LEFT);
       fill(255, 255, 255, 255);
-      //text ("-"+kx+"-"+ky+"-", 0, 20, 270, 50);
+      text ("-"+kx+"-"+ky+"-", 0, 20, 270, 50);
       //text (mouseX + " : " + mouseY, 0, 20, 270, 50);
-//      text (app.screen(), 0, 30, 270, 50);  // show the current screen of app
+      //text (screen, 0, 30, 270, 50);  // show the current screen of app
 //      text (appYH.screen(), 0, 60, 270, 50);  // show the current screen of app Yinghua - it should be same as the screen of app
     }
 
@@ -330,7 +353,7 @@ void mousePressed() {
   
 
   Point menuSize=new Point(w/5,55);
-  boolean hasMenu=(!app.screen().equals("PinScreen") && !app.screen().equals("AddCard"));
+  boolean hasMenu=(!appSM.screen().equals("PinScreen") && !appSM.screen().equals("AddCard"));
   if(hasMenu && ky==8) {
        char mA='A';
        int mIndex=((int)(mouseX - kpLeftTop.x))/((int)menuSize.x);
@@ -338,12 +361,12 @@ void mousePressed() {
        allJarsSync_menu(mTrigger);
   }
    
-  if(app.screen().equals("AddCard") || app.screen().equals("SetPin")) {  //11/26/2018 add set pin
+  if(appSM.screen().equals("AddCard") || appSM.screen().equals("SetPin")) {  //11/26/2018 add set pin
     if(kx==3 && ky==1)  allJarsSync_next() ;
     if(kx==1 && ky==1) allJarsSync_prev();
   }
   
-  if(app.screen().equals("MyCards")) {
+  if(appSM.screen().equals("MyCards")) {
     if(kx==3 && ky==1)  allJarsSync_next();
   }
 
@@ -352,20 +375,29 @@ void mousePressed() {
 //try sync all team members' jars
 
 void allJarsSync_keyInput() {
-    switch(app.screen()){
+  //YH-app
+    switch(appSM.screen()){
       case "SetPin":
-        if(pinSelected)
-        appYH.touch(kx,ky);      
+        //if(pinSelected)
+       // appSM.touch(kx,ky);
+        if(overFour)
+        appSM.execute("4");
+        if(overSix)
+        {
+        appSM.execute("6");
+        }
+        if(overZero)
+        
         //app.touch(kx,ky);
         break;
       case "MyCardsPay":
-      
          if (overMyCardsPayCircle()) 
          {
           kx = 3;  // set to some random keys
           ky = 3;  
          }
-         app.touch(kx,ky);
+         //YH-app
+         appSM.touch(kx,ky);
          
          break;
       //case "Settings":
@@ -395,47 +427,53 @@ void allJarsSync_keyInput() {
           ky = 3;
           enablePay = true;
         }   
-        appYH.touch(kx,ky);      
-        app.touch(kx,ky);
+        //appYH.touch(kx,ky);      
+        //app.touch(kx,ky);
+        appSM.touch(kx,ky);
         
         break;
       case "PinScreen":
-        appYH.touch(kx,ky);
+      //YH
+        appSM.touch(kx,ky);
         break;
       default: 
-        appYH.touch(kx,ky);      
-        app.touch(kx,ky);
+       // appYH.touch(kx,ky);      
+       // app.touch(kx,ky);
+        appSM.touch(kx,ky);
     }
 }
 
 void allJarsSync_menu(char mTrigger) {
-  app.execute(String.valueOf(mTrigger)) ;
-  appYH.execute(String.valueOf(mTrigger)) ;
+  //text (mTrigger+"1", 0, 30, 270, 50);  // show the current screen of app
+ // app.execute(String.valueOf(mTrigger)) ;
+ // appYH.execute(String.valueOf(mTrigger)) ;
+  appSM.execute(String.valueOf(mTrigger)) ;
 }
 
 
 void allJarsSync_next() {
-    switch(app.screen()){
+    switch(appSM.screen()){
       case "SetPin":
       case "PinScreen":
-        appYH.next();
+        appSM.next();
         break;
       default: 
-        appYH.next();
-        app.next();
+       // appYH.next();
+        //app.next();
+        appSM.next();
     }
 }
 
 
 void allJarsSync_prev() {
-    switch(app.screen()){
+    switch(appSM.screen()){
       case "SetPin":
       case "PinScreen":
-        appYH.prev();
+        appSM.prev();
         break;
       default: 
-        appYH.prev();
-        app.prev();
+        appSM.prev();
+       // app.prev();
     }
 
 }
@@ -448,27 +486,29 @@ void loadDefaultFont()
 
 void invokePay()
 {
- app.touch(2,2); 
+ appSM.touch(2,2); 
 }
 
 void pinOptions()
 {
    fill(color(53,53,53));
                  textAlign(CENTER, CENTER);
-                  rect(0, 245, 320, 30, 0, 0,0,0);
-                  text("", 0 + (106 / 2), 245 + (30 / 2));
-  fill(color(76,76,76));
-                  rect(0, 248, 106, 24, 10, 10,10,10);
+                  rect(0, 220, 320, 60, 0, 0,0,0);
+                  text("", 0 + (106 / 2), 220 + (30 / 2));
+                  fill(fourPinBackground);
+                  rect(0, 222, 106, 55, 10, 10,10,10);
                   //rect(107, 20, 106, 30, 0, 0,0,0);
-                  rect(107, 248, 106, 24, 10, 10,10,10);
+                  fill(sixPinBackground);
+                  rect(107, 222, 106, 55, 10, 10,10,10);
                   //rect(214, 20, 106, 30, 0, 0,0,0);
-                  rect(214, 248, 106, 24, 10, 10,10,10);
+                  fill(zeroPinBackground);
+                  rect(214, 222, 106, 55, 10, 10,10,10);
                   
                   fill(255);
-                  textSize(14);
-                  text("4 PIN", 0 + (106 / 2), 245 + (30 / 2));
-                  text("6 PIN", 107 + (106 / 2), 245 + (30 / 2));
-                  text("0 PIN", 214 + (106 / 2), 245 + (30 / 2));
+                  textSize(18);
+                  text("4 PIN", 0 + (106 / 2), 222 + (55 / 2));
+                  text("6 PIN", 107 + (106 / 2), 222 + (55 / 2));
+                  text("0 PIN", 214 + (106 / 2), 222 + (55 / 2));
                   textAlign(CENTER, CENTER);
 }
 
@@ -488,26 +528,39 @@ void sixPins()
 }
 
 
-void update(int x, int y) {
-  if ( overRect(0, 248, 106, 24) ) {
+void update() {
+  if ( overRect(0, 222, 106, 55) ) {
     overFour = true;
+    overSix = false;
+    overZero = false;
+    fourPinBackground = color(85,85,85);
   } 
   else {
     overFour = false;
+    fourPinBackground = pinBackground;
   }
   
-  if ( overRect(107, 248, 106, 24) ) {
+  if ( overRect(107, 222, 106, 55) ) {
     overSix = true;
+    overZero = false;
+    overFour = false;
+    sixPinBackground = color(85,85,85);
+    
   } 
   else {
     overSix = false;
+    sixPinBackground = pinBackground;
   }
   
-  if ( overRect(214, 248, 106, 24) ) {
+  if ( overRect(214, 222, 106, 55) ) {
     overZero = true;
+    overFour = false;
+    overSix = false;
+    zeroPinBackground = color(85,85,85);
   } 
   else {
     overZero = false;
+    zeroPinBackground = pinBackground;
   }
 }
 
