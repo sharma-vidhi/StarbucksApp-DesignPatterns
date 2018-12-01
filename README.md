@@ -396,6 +396,14 @@ What will I do next week?
 - As this is the final sprint so there is no next week. 
 - There must be some feedback from the review and we might enhance it based on the feedback. 
 
+### AddCard Functionality (Srivatsa Mulpuri)
+
+What I have done this week
+
+- Added a frame to Pinscreen to select the Pin Setting option
+- Added fonts to match with the UI wireframes
+- Integrated the source code and fixed issues
+
 ### Order feature(Builder Pattern, Screen), Video, Documentation (Vidhi)
 To do:
 - Working on Builder pattern
