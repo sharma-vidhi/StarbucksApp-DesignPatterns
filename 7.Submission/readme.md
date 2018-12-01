@@ -39,13 +39,12 @@ Tasks of Week 1,2          |  Tasks of Week 3,4
  
 ![](./readme.assets/taskBoardSrivatsa.JPG)  |  
 
-- Thol Chidambaram
-
- - Processing setup
- - Stores map functionality
- - App selection user story
- - Wireframe for App selections
- - MyCards balance display
+- Tho Chidambaram
+  - Processing tool setup and demo
+  - Stores map functionality
+  - App selection user story
+  - Wireframe for App selections
+  - MyCards balance display
  
 ![](./readme.assets/TholTasks.png) 
 
