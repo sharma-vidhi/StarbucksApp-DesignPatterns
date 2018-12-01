@@ -24,6 +24,13 @@ Tasks of Week 1,2          |  Tasks of Week 3,4
 ![](./readme.assets/1543351854269.png)  |  ![](./readme.assets/1543351793435.png)
 
 
+- Srivatsa Mulpuri
+
+  - Set-pin function  (Command Pattern)
+  - Screen Design (Set pin, Add Card, Keypad, Settings using processing)
+  - Created fonts for displaying content in different screens
+  - Implemented Pin Selection, Add Card, setting functionalities in processing
+
 ### Link to your team's GitHub Repo (*)
 
 https://github.com/nguyensjsu/fa18-202-mystic
