@@ -236,7 +236,7 @@ To do:
 - Testing the complete flow
 
 -----------------------------------
-## Journal Week #3 - 11/16 to 11/29
+## Journal Week #3 - 11/16 to 11/22
 -----------------------------------
 
 ### Login Function (Yinghua Qin)
@@ -271,6 +271,30 @@ What I plan to do next week
 - Think about some wow factors to add into the project
 - Work with the team to get all screens implemented
 
+### Design pattern selection (Thol Chidambaram)
+
+What I have done this week
+
+- Design use case diagram for UI selection user story
+- Implement classes required for design pattern
+- Discussed with the team and picked up Strategy/Adapter pattern for implementation
+- Modified the screens as per the co-ordinates required by the starbucks app.
+- Integrate the changes with the other team members code
+
+What I plan to do next week
+
+- Review the code
+- Implement missing functionality
+- update documentation
+- Check team members on where do they stand
+- prepare for submission
+
+### XP Core Value - Communication
+At the crucial stage of the project clear communication is very importatant, team improved the communication in following ways.
+- Zoom meeting every other day
+- Private project group message in slack
+- Project integration meetings
+- In person xterme programming
 
 ### AddCard Functionality (Srivatsa Mulpuri)
 
