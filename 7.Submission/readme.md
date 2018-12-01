@@ -49,6 +49,19 @@ Tasks of Week 1,2          |  Tasks of Week 3,4
 ![](./readme.assets/TholTasks.png) 
 
 
+
+
+- Mitesh Kumar
+
+  - Balance Display MyCardsMoreOptions.
+  - State Pattern Implementation for 4pin/6pin/
+  - Screen Design for MyCards, MyCardsMoreOptions.
+  - Integrated Code for Balance in MyCardsMoreOptions.
+  
+  
+ 
+![](./readme.assets/MiteshKumar.PNG)  |  
+
 ### Link to your team's GitHub Repo (*)
 
 https://github.com/nguyensjsu/fa18-202-mystic
