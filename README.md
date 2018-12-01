@@ -66,7 +66,7 @@ Additional Pattern Implementation - Build the jar file
 
 ### Login and Set Pin
 
-![](./3.UMLAnalysisModels./README.assets/1543350153375.png)
+![](./3.UMLAnalysisModels/readme.assets/1543350153375.png)
 
 ## Sequence Diagram of Set Pin - Observer Pattern
 
