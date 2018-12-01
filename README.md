@@ -146,6 +146,19 @@ To do:
 - Adding events to the buttons on the screen
 - Merging Java and processing code
 
+### Processing Tutorial and Pattern Use (Mitesh Kumar):
+
+Completed Tasks:
+- Tutorials and used examples on Processing.
+- Tried importing starbucks images. Read on how to import project in Processing.
+- Explored using key buttons in Processing.
+
+Tasks for Next Week:
+- Coming up with MyCardsMoreOptions screen import.
+- Implement balance functionality in MyCardsMoreOptions in Processing.
+- Desing Pattern Trials for login screen and Payments.
+
+
 ------------------------
 ## Journal Week #2
 -------------------------
@@ -216,6 +229,22 @@ To do:
 
 - Adding the wow factor, trying to adding "Feature Model"
 - Testing the complete flow
+
+
+### MyCardsMoreOptions in Processing (Mitesh Kumar)
+
+What I have done this week
+
+- Implemented MyCardsMoreOptions functionality in Processing.
+- Modified Images to take care of balance display.
+- Debugged code to fix some hang bugs.
+
+What I plan to do next week
+
+- Come up with some ideas 
+
+
+
 
 
 -------------------------
