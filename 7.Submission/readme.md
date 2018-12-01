@@ -36,8 +36,7 @@ Tasks of Week 1,2          |  Tasks of Week 3,4
   - Created fonts for displaying content in different screens
   - Implemented Pin Selection, Add Card, Setting functionalities in processing
   
-  Tasks of Week 1,2         
-:-------------------------:
+ 
 ![](./readme.assets/taskBoardSrivatsa.JPG)  |  
 
 
