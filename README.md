@@ -199,7 +199,10 @@ What I plan to do next week
 - Complete the entire app functionality in processing.
 
 ### XP Core Value - Communication
-
+Keeping up the core value of "Communication", I performed the following actions for the team:
+- Setup meetings with team
+- Communicated possible design options with the team
+- Discussed user stories suitable for pattern implemenation
 
 ### AddCard Functionality (Srivatsa Mulpuri)
 
