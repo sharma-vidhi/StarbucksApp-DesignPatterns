@@ -39,6 +39,39 @@ Tasks of Week 1,2          |  Tasks of Week 3,4
  
 ![](./readme.assets/taskBoardSrivatsa.JPG)  |  
 
+- Tho Chidambaram
+  - Processing tool setup and demo
+  - Stores map functionality
+  - App selection user story
+  - Wireframe for App selections
+  - MyCards balance display
+ 
+![](./readme.assets/TholTasks.png) 
+
+
+
+
+- Mitesh Kumar
+
+  - Balance Display MyCardsMoreOptions.
+  - State Pattern Implementation for 4pin/6pin/
+  - Screen Design for MyCards, MyCardsMoreOptions.
+  - Integrated Code for Balance in MyCardsMoreOptions.
+  
+  
+ 
+![](./readme.assets/MiteshKumar.PNG)  |  
+
+- Vidhi Sharma
+
+   - MyCard and MyCardsPay Screen
+   - Order by builder pattern
+   - Created Screens (Order, tea, coffe)
+   - Documentation
+ 
+ ![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/7.Submission/readme.assets/task.png)
+ ![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/7.Submission/readme.assets/task1.png)
+
 
 ### Link to your team's GitHub Repo (*)
 
@@ -57,5 +90,6 @@ https://docs.google.com/spreadsheets/d/1Bgp7MEvAJLdRPv4VaqqbOdh7w5iifP2z1msP-3Uh
 
 
 ### Link to your team's Ad Video on YouTube
+https://youtu.be/vJfanitxGc0
 
-<To be added>
+
