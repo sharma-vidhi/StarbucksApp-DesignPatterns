@@ -79,5 +79,6 @@ https://docs.google.com/spreadsheets/d/1Bgp7MEvAJLdRPv4VaqqbOdh7w5iifP2z1msP-3Uh
 
 
 ### Link to your team's Ad Video on YouTube
+https://youtu.be/vJfanitxGc0
 
-<To be added>
+
