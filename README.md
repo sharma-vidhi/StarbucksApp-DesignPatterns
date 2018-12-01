@@ -406,4 +406,8 @@ To do:
 
 
 
+### 6 pin Screen Functionality, Documentation (Mitesh Kumar)
 
+Completed Tasks:
+- Documentation, Reports
+- Worked on State Pattern Implementation for 6 pins.
