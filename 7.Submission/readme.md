@@ -10,14 +10,15 @@ Starbucks Mobile App on Processing
 
 ### The names of each team member
 - Yinghua Qin
-
-
-### A summary of areas of contributions (for each team member)
-- Yinghua Qin
 - Thol 
 - Srivatsa Mulpuri
 - Vidhi Sharma
 - Mitesh Kumar
+
+
+### A summary of areas of contributions (for each team member)
+- Yinghua Qin
+
 
   - Login function  (State Pattern)
   - Set-pin function  (Observer Pattern)
