@@ -259,7 +259,9 @@ What I have done this week
 
 What I plan to do next week
 
-- Come up with some ideas 
+- Come up with some ideas to enhance functionality.
+- Use Patterns for new functionality.
+- Go over 4 pin / 6pin functionality for login.
 
 
 
