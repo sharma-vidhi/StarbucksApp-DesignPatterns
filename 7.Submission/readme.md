@@ -38,7 +38,7 @@ Tasks of Week 1,2          |  Tasks of Week 3,4
   
   Tasks of Week 1,2          |  Tasks of Week 3,4
 :-------------------------:|:-------------------------:
-![](./readme.assets/taskBoardSrivatsa.JPG)  |  ![](./readme.assets/1543351793435.png)
+![](./readme.assets/taskBoardSrivatsa.JPG)  |  
 
 
 ### Link to your team's GitHub Repo (*)
