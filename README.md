@@ -360,6 +360,20 @@ To do:
 - Adding events to the order screen 
 - Documentation
 
+### MyCardsMoreOptions Screen, New Functionality  (Mitesh Kumar)
+
+Completed Tasks:
+- Refined code to take care of balance in Processing.
+- Implemented State Pattern to take care of 4,6 and 0 pin in Login Screen.
+- Tried to come up with new functionality on Login.
+
+To Do Next Week:
+- Work with team memebers to merge code.
+- Create 6 digit pin screen.
+- Create Class Diagram for 6 digit pin entry.
+
+
+
 -----------------------------------
 ## Journal Week #4 - 11/23 to 11/30
 -----------------------------------
