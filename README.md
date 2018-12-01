@@ -66,7 +66,7 @@ Additional Pattern Implementation - Build the jar file
 
 ### Login and Set Pin
 
-![](./3.UMLAnalysisModels./README.assets/1543350153375.png)
+![](./3.UMLAnalysisModels/readme.assets/1543350153375.png)
 
 ## Sequence Diagram of Set Pin - Observer Pattern
 
@@ -82,9 +82,15 @@ Additional Pattern Implementation - Build the jar file
 
 ![1543300420465](./3.UMLAnalysisModels/readme.assets/1543300420465.png)
 
-----------------------
-## Journal Week #1
------------------------
+## Class Diagram
+
+#### Order- Builder Pattern
+
+![](https://user-images.githubusercontent.com/17009702/49313115-230d9100-f49b-11e8-9266-c70c740d3f8a.png)
+
+-----------------------------------
+## Journal Week #1 - 11/02 to 11/08
+-----------------------------------
 
 ### Login Function (Yinghua Qin)
 
@@ -118,6 +124,13 @@ What I plan to do next week
 - Check the possibility of Features IDE modeling using AspectJ for feature selection.
 - How should I implement MyCards page to MyCardsOptions navigations? which pattern should I use?
 
+### XP Core Value - Communication
+I have facilitated continuous and constant communiation through out week 1. List of initiatives I did to keep up the core value of communication are the following. 
+- Communicated with the team about the capabilities of Processing. 
+- Send out the design for store display in processing. 
+- Initiated a Whatsapp group discussion. 
+- Setup a zoom meeting and gave a demo on processing and stores display.
+
 ### AddCard Functionality (Srivatsa Mulpuri)
 
 What I have done this week
@@ -145,9 +158,22 @@ To do:
 - Adding events to the buttons on the screen
 - Merging Java and processing code
 
-------------------------
-## Journal Week #2
--------------------------
+### Processing Tutorial and Pattern Use (Mitesh Kumar):
+
+Completed Tasks:
+- Tutorials and used examples on Processing.
+- Tried importing starbucks images. Read on how to import project in Processing.
+- Explored using key buttons in Processing.
+
+Tasks for Next Week:
+- Coming up with MyCardsMoreOptions screen import.
+- Implement balance functionality in MyCardsMoreOptions in Processing.
+- Desing Pattern Trials for login screen and Payments.
+
+
+-----------------------------------
+## Journal Week #2 - 11/09 to 11/15
+-----------------------------------
 
 ### Login Function (Yinghua Qin)
 
@@ -185,6 +211,12 @@ What I plan to do next week
 - Discuss with team on where they stand
 - Complete the entire app functionality in processing.
 
+### XP Core Value - Communication
+Keeping up the core value of "Communication", I performed the following actions for the team:
+- Setup meetings with team
+- Communicated possible design options with the team
+- Discussed user stories suitable for pattern implemenation
+
 ### AddCard Functionality (Srivatsa Mulpuri)
 
 What I have done this week
@@ -216,9 +248,28 @@ To do:
 - Adding the wow factor, trying to adding "Feature Model"
 - Testing the complete flow
 
--------------------------
-## Journal Week #3
----------------------------
+
+### MyCardsMoreOptions in Processing (Mitesh Kumar)
+
+What I have done this week
+
+- Implemented MyCardsMoreOptions functionality in Processing.
+- Modified Images to take care of balance display.
+- Debugged code to fix some hang bugs.
+
+What I plan to do next week
+
+- Come up with some ideas to enhance functionality.
+- Use Patterns for new functionality.
+- Go over 4 pin / 6pin functionality for login.
+
+
+
+
+
+-----------------------------------
+## Journal Week #3 - 11/16 to 11/22
+-----------------------------------
 
 ### Login Function (Yinghua Qin)
 
@@ -252,6 +303,30 @@ What I plan to do next week
 - Think about some wow factors to add into the project
 - Work with the team to get all screens implemented
 
+### Design pattern selection (Thol Chidambaram)
+
+What I have done this week
+
+- Design use case diagram for UI selection user story
+- Implement classes required for design pattern
+- Discussed with the team and picked up Strategy/Adapter pattern for implementation
+- Modified the screens as per the co-ordinates required by the starbucks app.
+- Integrate the changes with the other team members code
+
+What I plan to do next week
+
+- Review the code
+- Implement missing functionality
+- update documentation
+- Check team members on where do they stand
+- prepare for submission
+
+### XP Core Value - Communication
+At the crucial stage of the project clear communication is very importatant, team improved the communication in following ways.
+- Zoom meeting every other day
+- Private project group message in slack
+- Project integration meetings
+- In person xterme programming
 
 ### AddCard Functionality (Srivatsa Mulpuri)
 
@@ -285,9 +360,9 @@ To do:
 - Adding events to the order screen 
 - Documentation
 
----------------------
-## Journal Week #4
-----------------------
+-----------------------------------
+## Journal Week #4 - 11/23 to 11/30
+-----------------------------------
 
 ### Login Function and Set Pin Function (Yinghua Qin)
 
