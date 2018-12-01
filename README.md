@@ -124,6 +124,13 @@ What I plan to do next week
 - Check the possibility of Features IDE modeling using AspectJ for feature selection.
 - How should I implement MyCards page to MyCardsOptions navigations? which pattern should I use?
 
+### XP Core Value - Communication
+I have facilitated continuous and constant communiation through out week 1. List of initiatives I did to keep up the core value of communication are the following. 
+- Communicated with the team about the capabilities of Processing. 
+- Send out the design for store display in processing. 
+- Initiated a Whatsapp group discussion. 
+- Setup a zoom meeting and gave a demo on processing and stores display.
+
 ### AddCard Functionality (Srivatsa Mulpuri)
 
 What I have done this week
