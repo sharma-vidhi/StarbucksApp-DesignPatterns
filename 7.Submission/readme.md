@@ -29,7 +29,7 @@ Tasks of Week 1,2          |  Tasks of Week 3,4
   - Set-pin function  (Command Pattern)
   - Screen Design (Set pin, Add Card, Keypad, Settings using processing)
   - Created fonts for displaying content in different screens
-  - Implemented Pin Selection, Add Card, setting functionalities in processing
+  - Implemented Pin Selection, Add Card, Setting functionalities in processing
 
 ### Link to your team's GitHub Repo (*)
 
