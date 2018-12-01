@@ -88,9 +88,9 @@ Additional Pattern Implementation - Build the jar file
 
 ![](https://user-images.githubusercontent.com/17009702/49313115-230d9100-f49b-11e8-9266-c70c740d3f8a.png)
 
-----------------------
-## Journal Week #1
------------------------
+-----------------------------------
+## Journal Week #1 - 11/02 to 11/08
+-----------------------------------
 
 ### Login Function (Yinghua Qin)
 
@@ -158,9 +158,9 @@ To do:
 - Adding events to the buttons on the screen
 - Merging Java and processing code
 
-------------------------
-## Journal Week #2
--------------------------
+-----------------------------------
+## Journal Week #2 - 11/09 to 11/15
+-----------------------------------
 
 ### Login Function (Yinghua Qin)
 
@@ -198,6 +198,9 @@ What I plan to do next week
 - Discuss with team on where they stand
 - Complete the entire app functionality in processing.
 
+### XP Core Value - Communication
+
+
 ### AddCard Functionality (Srivatsa Mulpuri)
 
 What I have done this week
@@ -229,9 +232,9 @@ To do:
 - Adding the wow factor, trying to adding "Feature Model"
 - Testing the complete flow
 
--------------------------
-## Journal Week #3
----------------------------
+-----------------------------------
+## Journal Week #3 - 11/16 to 11/29
+-----------------------------------
 
 ### Login Function (Yinghua Qin)
 
@@ -298,9 +301,9 @@ To do:
 - Adding events to the order screen 
 - Documentation
 
----------------------
-## Journal Week #4
-----------------------
+-----------------------------------
+## Journal Week #4 - 11/23 to 11/30
+-----------------------------------
 
 ### Login Function and Set Pin Function (Yinghua Qin)
 
