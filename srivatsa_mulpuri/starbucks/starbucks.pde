@@ -1,10 +1,18 @@
-import starbucks.*;
+import starbucks.*; //<>//
 import java.awt.Point;
 import java.util.Arrays;
 
+int rectX, rectY, rectWidth, rectHeight;
 
+boolean rectOver = false;
 boolean debug=true;
-String[] screens = { "PinScreen", "MyCards", "AddCard", "MyCardsOptions","MyCardsMoreOptions", "MyCardsPay", "Rewards","Settings", "Store","Payments"};
+boolean enablePay = false;
+
+float a = 95;
+
+color buttontHighlight;
+
+String[] screens = { "PinScreen", "MyCards", "AddCard", "MyCardsOptions","MyCardsMoreOptions", "MyCardsPay", "Rewards","Settings", "Store","Payments","SetPin"};
 String[] keypadButtons = { "One", "Two", "Three", "Four","Five", "Six", "Seven","Eight", "Nine","Spacer","Zero","BackSpace"};
 PImage[] screenImages = new PImage[screens.length];
 PImage[] keypadButtonImages = new PImage[keypadButtons.length];
@@ -21,7 +29,8 @@ int kx,ky;
 int headerHeight=60;
 
 PFont font;
-
+PImage screenBlur;
+PImage mycardPayTouch;
 
 String pin = "1234";
 String pinInput = "";
@@ -35,11 +44,20 @@ void setup() {
 
 
   size(320,500);  //480
+  rectX = 0;
+  rectY = 20;
+  rectWidth = 100;
+  rectHeight = 30;
+  buttontHighlight = color(49,49,49);
   // Make a new instance of a PImage by loading an image file
   for (int i=0; i < screens.length; i++) {
     screenImages[i] = loadImage("/Images/"+screens[i]+".jpg");
     screenImages[i].resize(w,h);
   }
+  screenBlur = loadImage("/Images/MyCardsPayBlur.png");
+  screenBlur.resize(w,h);
+  mycardPayTouch = loadImage("/Images/MyCardsPayTouch.png");
+  mycardPayTouch.resize(w,h);
   
   for (int i = 0; i<keypadButtons.length; i++)
   {
@@ -94,11 +112,12 @@ void draw() {
   textSize(32);
   String screen=app.screen();
   int sIndex=Arrays.asList(screens).indexOf(screen);
-  background(screenImages[sIndex]);
+    background(screenImages[sIndex]);
   //System.out.print(screen);
   switch(screen) 
         { 
             case "PinScreen":
+            //pinSetting();
                 for (int i = 0; i<keypadButtons.length; i++)
                   {
                     keypadImageButtonsPS[i].update();
@@ -121,13 +140,17 @@ void draw() {
               }
               break;
             case "MyCards":  
+              a = 95;
+              fill(255,255,255);
+              font = loadFont("Georgia-50.vlw");
               lines = app.screenContents().split("\n");
                balance=lines[7];
+               textFont(font);
                       textAlign(CENTER);
-                      fill(255, 255, 255, 255);
+                      
                       //text (balance, 20, 160, 270, 50);
-                      text (balance, 60, 295, 200, 40);
-              
+                      text (balance, 160, 330);
+                      //loadDefaultFont();
               break;  
             case "AddCard":
               for (int i = 0; i<keypadButtons.length; i++)
@@ -150,17 +173,38 @@ void draw() {
               String ba = balance; 
               textAlign(CENTER);
               fill(255,255,255,255);
-              text(ba,150,80,200,40);
+              text(ba,260, 130);
               break;
             case "MyCardsPay":
+              font = loadFont("SegoeUI-Semibold-18.vlw");
               lines = app.screenContents().split("\n");
               cardId =lines[6].trim().replace("[","").replace("]","");           
               textAlign(CENTER);
-              fill(153);
+              textFont(font);
+              fill(50);
               //text (balance, 20, 160, 270, 50);
-              textSize(20);
-              text (cardId, 75, 85, 225, 85);  
-                      
+              //textSize(20);
+              text (cardId, 75, 91, 225, 91);  
+               if(kx==2 && (ky == 4) || (ky == 5) || (ky == 6))
+               {
+                 background(screenBlur);
+                 textSize(20);
+                 text (cardId, 75, 91, 225, 91); 
+                 strokeWeight(3);
+                 line(a, 110, a, 182);
+                 a = a + 3.5;
+                if (a > 275) { 
+                  background(mycardPayTouch); 
+                  kx = 3;
+                  loadDefaultFont();
+                  if(enablePay)
+                  {
+                   invokePay();
+                   enablePay = false;
+                  }
+                }
+                
+               }
             
               break;
             case "Rewards":
@@ -178,8 +222,8 @@ void draw() {
       textSize(25);
       textAlign(LEFT);
       fill(255, 255, 255, 255);
-     // text (mouseX + " : " + mouseY, 0, 20, 270, 50);
-     // text ("-"+kx+"-"+ky+"-", 0, 20, 270, 50);
+      //text (mouseX + " : " + mouseY, 0, 20, 270, 50);
+      text ("-"+kx+"-"+ky+"-", 0, 20, 270, 50);
       
     }
 
@@ -214,11 +258,23 @@ void mousePressed() {
   
   //boolean kpzone= ( ky > 4 && ky<9 && kx<=3 && kx>=1 );
   //boolean tzone= (fullScreen || ky <= 4 );
-   
+  if (app.screen().equals("MyCardsPay")) {
+       if (overMyCardsPayCircle()) {
+                kx = 3;  // set to some random keys
+                ky = 3;  
+              }
+     }
+     
+    if (app.screen().equals("Settings")) {
+       if ((kx == 1 || kx == 2 || kx == 3) && (ky == 1 || ky == 2 || ky == 3)) {
+                kx = 2;  // set to some random keys
+                ky = 1;  
+              }
+     }
   if (app.screen().equals("MyCards")) {
     if ((kx == 2 && ky == 4) || (kx == 3 && ky == 3)) {
       kx = 1;  // set to some random keys
-      ky = 4;  
+      ky = 4; 
     }
     if ( mouseX >= 60 && mouseX <= 260 &&
       mouseY >= 295 && mouseY <= 370) { 
@@ -229,6 +285,7 @@ void mousePressed() {
     if (overMyCardsPayCircle()){
       kx = 3;
       ky = 3;
+      enablePay = true;
     }    
   }
 
@@ -240,7 +297,7 @@ void mousePressed() {
   Point menuSize=new Point(w/5,55);
   boolean hasMenu=(!app.screen().equals("PinScreen") && !app.screen().equals("AddCard"));
   if(hasMenu && ky==8) {
-       char mA='A'; //<>//
+       char mA='A';
        int mIndex=((int)(mouseX - kpLeftTop.x))/((int)menuSize.x);
        char mTrigger=(char)((int)mA+mIndex);
        app.execute(String.valueOf(mTrigger)) ;
@@ -262,4 +319,48 @@ void loadDefaultFont()
 {
  font = loadFont("SansSerif.plain-20.vlw");
  textFont(font);
+}
+
+void invokePay()
+{
+ app.touch(2,2); 
+}
+
+void pinSetting()
+{
+  update(mouseX, mouseY);
+   println(rectOver);
+   if (rectOver) {
+    fill(color(#3C3C3C));
+  } else {
+    fill(color(#333333));
+  }
+  //stroke(141);
+  font = loadFont("Calibri-Bold-18.vlw");
+  rect(rectX, rectY, rectWidth, rectHeight, 10, 10,10,10);
+  textAlign(CENTER, CENTER);
+  fill(255);
+  textFont(font, 18);
+  //image(img,rectX+rectWidth-img.width-6,rectY+4);
+  //textSize(13);
+  text("Set Pin", rectX + (rectWidth / 2), rectY + (rectHeight / 2));
+  
+}
+
+void update(int x, int y) {
+  if ( overRect(rectX, rectY, rectWidth, rectHeight) ) {
+    rectOver = true;
+  } 
+  else {
+    rectOver = false;
+  }
+}
+
+boolean overRect(int x, int y, int width, int height)  {
+  if (mouseX >= x && mouseX <= x+width && 
+      mouseY >= y && mouseY <= y+height) {
+    return true;
+  } else {
+    return false;
+  }
 }

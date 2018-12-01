@@ -8,10 +8,13 @@ abstract class StarbucksBuilder {
  
 	public void createStarbucks() {
 		starbucks = new Starbucks();
-		System.out.println("Your drink is read");
+		System.out.println("Your Order:");
 	}
  
-	public abstract void buildSize();
+	
 	public abstract void buildDrink();
+	public abstract void buildSize();
+	public abstract void buildMilk();
+	public abstract void buildFalvour();
 
 }
