@@ -170,6 +170,12 @@ Tasks for Next Week:
 - Implement balance functionality in MyCardsMoreOptions in Processing.
 - Desing Pattern Trials for login screen and Payments.
 
+### XP Core Value - Courage
+- Continously brought ideas to implement to the team.
+- Always encourage everyone to try new things.
+- Brought Positive Energy in Team Meeting.
+
+
 
 -----------------------------------
 ## Journal Week #2 - 11/09 to 11/15
