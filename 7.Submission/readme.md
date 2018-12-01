@@ -62,6 +62,16 @@ Tasks of Week 1,2          |  Tasks of Week 3,4
  
 ![](./readme.assets/MiteshKumar.PNG)  |  
 
+- Vidhi Sharma
+
+ - MyCard and MyCardsPay Screen
+ - Order by builder pattern, Created Screens (Order, tea, coffe)
+ - Documentation
+ 
+ ![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/7.Submission/readme.assets/task.png)
+ ![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/7.Submission/readme.assets/task1.png)
+
+
 ### Link to your team's GitHub Repo (*)
 
 https://github.com/nguyensjsu/fa18-202-mystic
