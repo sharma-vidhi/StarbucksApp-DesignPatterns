@@ -1,11 +1,9 @@
-import starbucksSM.*; //<>//
+import starbucks.*; //<>//
 
 import starbucksSM.*;
 
-import starbucks.*;
-
 //Each of us need to import our jar file here
-import starbucksYH.*;
+//import starbucksYH.*;
 
 import java.awt.Point;
 import java.util.Arrays;
