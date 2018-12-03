@@ -1,4 +1,6 @@
-import starbucks.*; //<>//
+import starbucksTeam.*; //<>//
+
+import starbucks.*;
 import java.awt.Point;
 import java.util.Arrays;
 
@@ -39,6 +41,8 @@ int h=headerHeight+55*8;//before:480; now: 500
 IApp app = new AppAuthProxy() ;
 String[] lines ;
 String balance = "$0.00";
+
+IItemJar setPin= new PinScreen();      //add team members screens.
 
 void setup() {
 
@@ -103,6 +107,10 @@ void setup() {
   textAlign(LEFT);
   fill(0, 102, 153, 204);
   frameRate(12);
+  
+  
+  //member screen need to accept by app here.
+  setPin.accept((IAppVisitor)app);
 
 }
 
@@ -139,6 +147,15 @@ void draw() {
                       text ("Invalid Pin", 20, 160, 270, 50);
               }
               break;
+            case "SetPin":  //yinghua  project
+              lines = app.screenContents().split("\n");
+              pin=lines[5].trim().replace("[","").replace("]","");
+              fill(0, 102, 153, 204);
+              for (int i =0; i < min(pin.length(),4); i++) {
+                text (pin.substring(i,i+1), 40+i*70, 90, 50, 50);
+              } 
+              break;
+              
             case "MyCards":  
               a = 95;
               fill(255,255,255);
@@ -295,7 +312,9 @@ void mousePressed() {
   
 
   Point menuSize=new Point(w/5,55);
-  boolean hasMenu=(!app.screen().equals("PinScreen") && !app.screen().equals("AddCard"));
+  String testS=app.screen();
+  
+  boolean hasMenu=(!app.screen().equals("PinScreen") && !app.screen().equals("AddCard")); //<>//
   if(hasMenu && ky==8) {
        char mA='A';
        int mIndex=((int)(mouseX - kpLeftTop.x))/((int)menuSize.x);
