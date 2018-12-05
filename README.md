@@ -88,6 +88,12 @@ Additional Pattern Implementation - Build the jar file
 
 ![](https://user-images.githubusercontent.com/17009702/49313115-230d9100-f49b-11e8-9266-c70c740d3f8a.png)
 
+
+
+#### Processing / Base Jar / New Screens - Visitor Pattern
+
+![1543968465578](./README.assets/1543968465578.png)
+
 -----------------------------------
 ## Journal Week #1 - 11/02 to 11/08
 -----------------------------------
@@ -390,7 +396,7 @@ What I have done this week
 - Implemented a "Set Pin" with Observer design pattern
 - Implemented the multiple app Visitor design pattern
 
-![](./README.assets/1543425658654.png)
+![1543968388587](./README.assets/1543968388587.png)
 
 ##### Set Pin Showcase
 
