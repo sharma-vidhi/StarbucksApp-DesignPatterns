@@ -11,50 +11,20 @@ References:
 - Java Programming with Processing from professor. https://slack-files.com/files-pri-safe/T0AMW0A3S-FE1PXQENB/java_programming_with_processing.pdf?c=1542777253-18a17676a94dbe8e972df65fdb4a86d335ebf835
 - Processing official website.   https://processing.org/
 
-Development environment setup instruction (Updated to V2 at November 26, 2018)
+## Development environment setup instruction (latest version)
 
-    1) Download the jar files here: 
-    - https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/StarbucksGUI/lib/starbucks.jar
-    - https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/StarbucksGUI/lib/starbucksyh.jar
-    
-    2) Put the jar files to the processing lib folder , such as: - -
-    - processing\modes\java\libraries\starbucks\library\starbucks.jar
-    - processing\modes\java\libraries\starbucksyh\library\starbucksyh.jar
-    
-    3) Restart the process IDE
-    
-    4) Import the lib into processing
-    
-    5) Download the project from here: https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/StarbucksGUI
-    
-    6) Start to update the starbucksGUI.pde for existing screens and commit the changes
+We are using visitor design pattern between processing, starbucks.jar and new screens.
 
-Additional Pattern Implementation - Processing Part
+All the new screens are under team project folder now. 
 
-    1) Get the above environment setup done
-    2) Implement the additional pattern on java file, compile and build as a jar file
-    3) Upload the jar file to the lib folder, for example: 
-    - https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/StarbucksGUI/lib/starbucksyh.jar
-    4) Put the jar file to the processing folder, for example:
-    - processing\modes\java\libraries\starbucksyh\library\starbucksyh.jar
-    5) Restart the process IDE
-    6) Import the lib into processing
-    7) Update the starbucksGUI.pde for new screens and new patterns
-    8) Please update the development environment instruction once you have added a new jar file and notify the team to rebase
+1) Here is the source code for implementing the team project: https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/starbucksTeamSource
 
-Additional Pattern Implementation - Build the jar file
+2) Here is the latest processing code: https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/starbucks_processing_v2
 
-    1) Update the prof starbuck package name to self name, such as starbuckYH;
-       You can use notepad++ to "replace in files" to replace "package starbuck" to "package starbuckXX", such as "package starbuckYH"
-       change the folder name src->main->java->starbuck  to src->main->java->starbuckYH
-                              src->test->java->starbuck  to src->test->java->starbuckYH
-    2) Re-import the project into eclipse. you will see all your src code package will change to self name.
-    3) Update AppSuthProxy.java, set public to "public boolean authenticated = false ;". It is used for team member jar auth status update.
-    4) In the build.gradle file, change baseName = 'starbucks' to baseName = 'starbucksYH'
-       In the settings.gradle, change rootProject.name = 'starbucksYH'
-    5) Using the original "gradlew jar" to build your jar file
+3) Here is the two library we use. Please check the readme file here for how to use them.  https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/starbucksJarLibraries 
 
-**Activity Diagram**
+
+## Activity Diagram
 
 ![ActivityDiagram](./3.UMLAnalysisModels/ActivityDiagram.png)
 
