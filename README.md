@@ -17,11 +17,11 @@ We are using visitor design pattern between processing, starbucks.jar and new sc
 
 All the new screens are under team project folder now. 
 
-1) Here is the source code for implementing the team project: https://github.com/nguyensjsu/fa18-202-mystic/tree/master/yinghua_qin/starbucksTeamSource
+1) Here is the source code for implementing the team project: https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/starbucksTeamSource
 
-2) Here is the latest processing code: https://github.com/nguyensjsu/fa18-202-mystic/tree/master/yinghua_qin/starbucks_processing_v2
+2) Here is the latest processing code: https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/starbucks_processing_v2
 
-3) Here is the two library we use. Please check the readme file here for how to use them.  https://github.com/nguyensjsu/fa18-202-mystic/tree/master/yinghua_qin/starbucksJarLibraries 
+3) Here is the two library we use. Please check the readme file here for how to use them.  https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/starbucksJarLibraries 
 
 
 ## Activity Diagram
