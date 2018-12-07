@@ -11,15 +11,19 @@ References:
 - Java Programming with Processing from professor. https://slack-files.com/files-pri-safe/T0AMW0A3S-FE1PXQENB/java_programming_with_processing.pdf?c=1542777253-18a17676a94dbe8e972df65fdb4a86d335ebf835
 - Processing official website.   https://processing.org/
 
-Development environment setup instruction (latest version using visitor design pattern between processing, starbucks.jar and new screens)
+Development environment setup instruction (latest version)
+
+We are using visitor design pattern between processing, starbucks.jar and new screens.
 
 All the new screens are under team project folder now. 
 
-    1) Here is the source code for implementing the team project: https://github.com/nguyensjsu/fa18-202-mystic/tree/master/yinghua_qin/starbucksTeamSource
-    2) Here is the latest processing code: https://github.com/nguyensjsu/fa18-202-mystic/tree/master/yinghua_qin/starbucks_processing_v2
-    3) Here is the two library we use. Please check the readme file here for how to use them.  https://github.com/nguyensjsu/fa18-202-mystic/tree/master/yinghua_qin/starbucksJarLibraries 
+1) Here is the source code for implementing the team project: https://github.com/nguyensjsu/fa18-202-mystic/tree/master/yinghua_qin/starbucksTeamSource
 
-Development environment setup instruction (This is *not* needed anymore as we are using the new approach.)
+2) Here is the latest processing code: https://github.com/nguyensjsu/fa18-202-mystic/tree/master/yinghua_qin/starbucks_processing_v2
+
+3) Here is the two library we use. Please check the readme file here for how to use them.  https://github.com/nguyensjsu/fa18-202-mystic/tree/master/yinghua_qin/starbucksJarLibraries 
+
+Development environment setup instruction (This is *not* needed anymore as we are using the above new approach.)
 
     1) Download the jar files here: 
     - https://github.com/nguyensjsu/fa18-202-mystic/tree/master/5.SourceCode/StarbucksGUI/lib/starbucks.jar
