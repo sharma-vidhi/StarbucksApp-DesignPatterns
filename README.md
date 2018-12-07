@@ -11,7 +11,7 @@ References:
 - Java Programming with Processing from professor. https://slack-files.com/files-pri-safe/T0AMW0A3S-FE1PXQENB/java_programming_with_processing.pdf?c=1542777253-18a17676a94dbe8e972df65fdb4a86d335ebf835
 - Processing official website.   https://processing.org/
 
-Development environment setup instruction (latest version)
+## Development environment setup instruction (latest version)
 
 We are using visitor design pattern between processing, starbucks.jar and new screens.
 
@@ -24,7 +24,7 @@ All the new screens are under team project folder now.
 3) Here is the two library we use. Please check the readme file here for how to use them.  https://github.com/nguyensjsu/fa18-202-mystic/tree/master/yinghua_qin/starbucksJarLibraries 
 
 
-**Activity Diagram**
+## Activity Diagram
 
 ![ActivityDiagram](./3.UMLAnalysisModels/ActivityDiagram.png)
 
