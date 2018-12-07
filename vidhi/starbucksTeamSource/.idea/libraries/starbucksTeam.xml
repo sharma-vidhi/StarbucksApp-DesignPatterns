@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="starbucksTeam">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../yinghua_qin/starbucksTeamSource/libs/starbucksTeam.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
