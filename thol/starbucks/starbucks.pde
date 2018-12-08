@@ -2,28 +2,138 @@ import starbucks.*;
 import java.awt.Point;
 import java.util.Arrays;
 
+interface AppStrategy {
+  String getImageDirectory();
+  int getHeaderHight();
+  int getHight();
+  int getWidth();
+  int getCoordinateX();
+  int getCoordinateY();
+}
+
+class Ui5Strategy implements AppStrategy {
+  
+  private String imageDirectory;
+  private int kx, ky;
+  private int h, w;  // 320 X 500
+  private int headerHeight=60;
+  Point kpRowColumn = new Point(3,8);
+  Point kpLeftTop   = new Point(0,headerHeight);  //260:keypad;40:touch
+  Point buttonSize  = new Point(106,55);
+  
+  public Ui5Strategy() {
+    this.imageDirectory = "";
+    this.h = headerHeight + (this.buttonSize.x * 8);
+    this.w = 320;
+  }
+  public Ui5Strategy(String dirName) {
+    this.imageDirectory = dirName;
+  }
+  
+  String getImageDirectory() {
+    return this.imageDirectory;
+  }
+  
+  int getHeaderHight() {
+    return this.getHeaderHight();
+  }
+  
+
+  int getHight() {
+    return this.h;
+  }
+
+  int getWidth() {
+    return this.w;
+  }
+
+  int getCoordinateX() {
+    //int kx,ky;  //keypress at (kx,ky) :4x3
+    kx=(((int)(mouseX - this.kpLeftTop.x))/((int)this.buttonSize.x))+1;
+    return this.kx;
+  }
+  
+  int getCoordinateY() {
+     ky=(((int)(mouseY - this.kpLeftTop.y))/((int)this.buttonSize.y))+1;
+    return this.ky;
+  }
+}
+
+class Ui10Strategy implements AppStrategy {
+  
+  private String imageDirectory;
+  private int kx, ky;
+  private int h, w;  // 450 X 908
+  private int headerHeight=108;
+  Point kpRowColumn = new Point(3,8);
+  Point kpLeftTop   = new Point(0,headerHeight);  //260:keypad;40:touch
+  Point buttonSize  = new Point(150,100);
+  
+  public Ui10Strategy() {
+    this.imageDirectory = "v10_images/";
+    this.h = headerHeight + (buttonSize.x * 8);
+    this.w = 450;
+  }
+  public Ui10Strategy(String dirName) {
+    this.imageDirectory = dirName;
+  }
+  
+  String getImageDirectory() {
+    return this.imageDirectory;
+  }
+
+  int getHight() {
+    return this.h;
+  }
+
+  int getWidth() {
+    return this.w;
+  }
+
+  int getHeaderHight() {
+    return this.getHeaderHight();
+  }
+
+  int getCoordinateX() {
+    //int kx,ky;  //keypress at (kx,ky) :4x3
+    kx=(((int)(mouseX - this.kpLeftTop.x))/((int)this.buttonSize.x))+1;
+    return this.kx;
+  }
+  
+  int getCoordinateY() {
+     ky=(((int)(mouseY - this.kpLeftTop.y))/((int)this.buttonSize.y))+1;
+    return this.ky;
+  }
+}
+
+AppStrategy currStrategy;
 
 boolean debug=true;
 String[] screens = { "PinScreen", "MyCards", "AddCard", "MyCardsOptions","MyCardsMoreOptions", "MyCardsPay", "Rewards","Settings", "Store","Payments"};
 PImage[] screenImages = new PImage[screens.length];
 
 int kx,ky;
-int headerHeight=60;
 
 
 String pin = "1234";
 String pinInput = "";
 int w=320;
-int h=headerHeight+55*8;//before:480; now: 500
+int h=500;//before:480; now: 500
 IApp app = new AppAuthProxy() ;
 String[] lines ;
 void setup() {
 
-
+  currStrategy = new Ui5Strategy();
+  //currStrategy = new Ui10Strategy();
+  
+  String imDir = currStrategy.getImageDirectory();
+  h = currStrategy.getHight();
+  w = currStrategy.getWidth();
+  System.out.println(h + "  " + w);
   size(320,500);  //480
   // Make a new instance of a PImage by loading an image file
   for (int i=0; i < screens.length; i++) {
-    screenImages[i] = loadImage(screens[i]+".jpg");
+    screenImages[i] = loadImage(imDir + screens[i]+".jpg");
     screenImages[i].resize(w,h);
   }
   textAlign(LEFT);
@@ -94,8 +204,8 @@ void draw() {
       textSize(25);
       textAlign(LEFT);
       fill(255, 255, 255, 255);
-      text (mouseX + " : " + mouseY, 0, 20, 270, 50);
-      //text ("-"+kx+"-"+ky+"-", 0, 20, 270, 50);
+      //text (mouseX + " : " + mouseY, 0, 20, 270, 50);
+      text ("+"+kx+"-"+ky+"-", 0, 30, 270, 70);
       
     }
 
@@ -118,14 +228,17 @@ void mousePressed() {
   //int button_width = 106;
   //int button_height = 55;
  
-  
+  int headerHeight = currStrategy.getHeaderHight();
   Point kpRowColumn=new Point(3,8);
   Point kpLeftTop=new Point(0,headerHeight);  //260:keypad;40:touch
-  Point buttonSize=new Point(106,55);
+  //Point buttonSize=new Point(106,55);
 
   //int kx,ky;  //keypress at (kx,ky):4x3
-  kx=((int)(mouseX - kpLeftTop.x))/((int)buttonSize.x)+1;
-  ky=((int)(mouseY - kpLeftTop.y))/((int)buttonSize.y)+1;
+  //kx=((int)(mouseX - kpLeftTop.x))/((int)buttonSize.x)+1;
+  //ky=((int)(mouseY - kpLeftTop.y))/((int)buttonSize.y)+1;
+  
+  kx = currStrategy.getCoordinateX();
+  ky = currStrategy.getCoordinateY();
   
   
   //boolean kpzone= ( ky > 4 && ky<9 && kx<=3 && kx>=1 );
