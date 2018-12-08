@@ -1,4 +1,3 @@
-### Project Demo (https://drive.google.com/drive/folders/1-_0rvXAtVmXnOtqnUpz1zz7_r5MsUADY?usp=sharing)
 ### AD Video
 [AD Video](https://youtu.be/G6o2HNNBInE)
 
