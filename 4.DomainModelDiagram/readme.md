@@ -25,5 +25,9 @@
 
 ![1543351049256](./readme.assets/1543351049256.png)
 
+## Class diagram for Strategy Pattern
+
+![](./readme.assets/strategy_pattern_class_diagram.jpg)
+
 
 
