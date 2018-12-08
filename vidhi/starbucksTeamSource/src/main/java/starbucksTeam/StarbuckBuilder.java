@@ -6,7 +6,7 @@ public class StarbuckBuilder {
     public StarbuckBuilder withFlavour(Flavour flavour) {
         starbucks.setFlavour(flavour);
         starbucks.addtoOrdr(flavour.getName());
-        //starbucks.addToPrice(topping.getCost());
+        //starbucks.addToPrice(flavour.getCost());
         return this;
     }
 
@@ -20,7 +20,7 @@ public class StarbuckBuilder {
     public StarbuckBuilder withMilk(Milk milk) {
         starbucks.setMilk(milk);
         starbucks.addtoOrdr(milk.getName());
-        //starbucks.addToPrice(crust.getCost());
+        //starbucks.addToPrice(milk.getCost());
         return this;
     }
 
