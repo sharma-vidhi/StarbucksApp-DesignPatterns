@@ -375,7 +375,7 @@ What I have done this week
 
 ![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/yinghua_qin/setpin.gif)
 
-
+![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/srivatsa_mulpuri/starbucks/Command.png)
 What will I do next week?
 
 - As this is the final sprint so there is no next week. 
