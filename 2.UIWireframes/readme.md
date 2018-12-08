@@ -19,11 +19,10 @@ We have applied strategy pattern to switch between versions for converting the g
 ## Wireframes for future version
 We have also explored to use the latest Starbuck mobile app screen in the future version. 
 ![](./wireframe_pinscreen.png)
-
-## App screens for future version
 ![](./wireframe_myCards.png)
 ![](./wireframe_myCardsMoreOptions.png)
 ![](./wireframe_settings.png)
 
+## App screens for future version
 ![1543196506821](./readme.assets/1543196506821.png)
 
