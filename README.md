@@ -64,6 +64,9 @@ All the new screens are under team project folder now.
 
 ![1543968465578](./README.assets/1543968465578.png)
 
+#### Test Case - Order and Set pin
+![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/README.assets/test-case.png)
+
 -----------------------------------
 ## Journal Week #1 - 11/02 to 11/08
 -----------------------------------
