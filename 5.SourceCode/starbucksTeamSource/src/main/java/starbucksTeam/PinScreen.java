@@ -16,7 +16,7 @@ public class PinScreen implements IItemJar {
     	
     	  //setpin = new Screen("SetPin");   //for new setPinScreen requirement  11/5/2018
 		  kp9 = new KeyPad();  //give a new keypad for setPin, in case notify to wrong AddCard and AppController
-		  tsf9 = new TouchScreen(false);
+		  tsf9 = new TouchScreen(false); //false - half screen; true  - full screen
 		  setpin.addSubComponent( tsf9 ) ;  //hnote: must first, as screen.display show diplay items by sequence
 		  setpin.addSubComponent( kp9 ) ;
 		  setpinh = new SetPinHandler2(frame,refScreens,tsf9);

@@ -23,6 +23,12 @@ boolean overZero = false;
 boolean sixPinEnabled = false;
 boolean fourPinEnabled = false;
 boolean zeroPinEnabled = false;
+boolean cardIdFocus = false;
+boolean cardfocus = true;
+String cursor = "_";
+
+boolean blink = true;
+
 
 float a = 95;
 
@@ -146,7 +152,7 @@ void draw() {
   String screen=appSM.screen();
   int sIndex=Arrays.asList(screens).indexOf(screen);
   background(screenImages[sIndex]);
-  text ("-"+appSM.screen()+"-", 0, 20, 270, 50);
+ // text ("-"+appSM.screen()+"-", 0, 20, 270, 50);
   update();
   //System.out.print(screen);
   switch(screen) 
@@ -177,9 +183,10 @@ void draw() {
                 }
                 else
                 {
+                  loadDefaultFont();
                   fill(0, 102, 153, 204);
                   for (int i =0; i < min(pinInput.length(),4); i++) {
-                  text (pinInput.substring(i,i+1), 40+i*70, 90, 50, 50);
+                  text (pinInput.substring(i,i+1), 40+i*70, 110, 50, 50);
                 }
                 }
                 
@@ -200,6 +207,21 @@ void draw() {
                 //for (int i =0; i < min(pin.length(),4); i++) {
                 //  text (pin.substring(i,i+1), 40+i*70, 90, 50, 50);
                 //} 
+                fill(color(72,72,72));
+                noStroke();
+                rect(10, 50, 100, 30, 50, 0,0,0);
+                fill(color(68,68,68));
+                rect(110, 50, 100, 30, 0, 0,0,0);
+                fill(color(40,40,40));
+                rect(210, 50, 50, 30, 0, 0,0,0);
+                fill(color(30,30,30));
+                rect(260, 50, 100, 30, 0, 0,0,0);
+                fill(color(255,255,255));
+                font = loadFont("Calibri-Bold-15.vlw");
+                textSize(15);
+                text ("Please set your passcode",70, 70 );
+                stroke(3);
+                
                 pinOptions();
                 for (int i = 0; i<keypadButtons.length; i++)
                   {
@@ -229,6 +251,7 @@ void draw() {
               break;
 
             case "MyCards":  
+            loadDefaultFont();
               a = 95;
               fill(255,255,255);
               font = loadFont("Georgia-50.vlw");
@@ -252,10 +275,26 @@ void draw() {
               lines = appSM.screenContents().split("\n"); 
               String cardId=lines[4].trim().replace("[","").replace("]",""); //assertEquals("[123456789]", lines[4].trim()); 
               String cardcode=lines[5].trim().replace("[","").replace("]",""); //assertEquals("[999]", lines[5].trim());
+               if(frameCount % 10 == 0){
+                blink = !blink;
+              }
               textFont(font);
               fill(50);
-              text (cardId, 96, 158);
-              text (cardcode, 144, 199);
+              if(blink){
+                text (cardId, 96, 158);
+                text (cardcode, 144, 199);
+              }
+              else{
+                if(cardfocus)
+                text (cardId+cursor, 96, 158);
+                else
+                text (cardId, 96, 158);
+                if(cardIdFocus)
+                text (cardcode+cursor, 144, 199);
+                else
+                text (cardcode, 144, 199);
+                //text(cardId+cursor, 100, 100, 200, 200);
+              }
               loadDefaultFont();
               break;            
              
@@ -334,7 +373,7 @@ void draw() {
       textAlign(LEFT);
       fill(255, 255, 255, 255);
       text ("-"+kx+"-"+ky+"-", 0, 20, 270, 50);
-      //text (mouseX + " : " + mouseY, 0, 20, 270, 50);
+     // text (mouseX + " : " + mouseY, 0, 20, 270, 50);
       //text (screen, 0, 30, 270, 50);  // show the current screen of app
 //      text (appYH.screen(), 0, 60, 270, 50);  // show the current screen of app Yinghua - it should be same as the screen of app
     }
@@ -474,6 +513,18 @@ void allJarsSync_keyInput() {
       //YH
         appSM.touch(kx,ky);
         break;
+        case "AddCard":
+      //YH
+        if(ky == 2 && (kx ==1 || kx ==2 || kx ==3))
+        {
+          cardfocus = true;
+          cardIdFocus = false; 
+        }
+         if(ky == 3 && (kx ==1 || kx ==2))
+         {
+           cardfocus = false;
+          cardIdFocus = true;
+         }
       default: 
         appSM.touch(kx,ky);
     }
@@ -556,6 +607,7 @@ void sixPins()
                 rect(164, 90, 40, 40, 0, 0,0,0); 
                 rect(215, 90, 40, 40, 0, 0,0,0); 
                 rect(266, 90, 40, 40, 0, 0,0,0); 
+                stroke(3);
                  
 }
 
