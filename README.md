@@ -391,11 +391,19 @@ What I have done this week
 
 ### Order feature(Builder Pattern, Screen), Video, Documentation (Vidhi)
 To do:
-- Working on Builder pattern
+- Worked on Builder pattern
 - designing order screen
 - Video
 - Documentation
 
+### Class Diagram
+
+![]{https://github.com/nguyensjsu/fa18-202-mystic/blob/master/README.assets/ClassDiagramOrder.png}
+
+
+### Sequence Diagram
+
+![]{https://github.com/nguyensjsu/fa18-202-mystic/blob/master/README.assets/SequencdDiagramOrder.png}
 
 
 
