@@ -398,12 +398,12 @@ To do:
 
 ### Class Diagram
 
-![]{https://github.com/nguyensjsu/fa18-202-mystic/blob/master/README.assets/ClassDiagramOrder.png}
+![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/README.assets/ClassDiagramOrder.png)
 
 
 ### Sequence Diagram
 
-![]{https://github.com/nguyensjsu/fa18-202-mystic/blob/master/README.assets/SequencdDiagramOrder.png}
+![](https://github.com/nguyensjsu/fa18-202-mystic/blob/master/README.assets/SequencdDiagramOrder.png)
 
 
 
