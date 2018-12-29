@@ -1,4 +1,4 @@
-# CMPE 202 - Team Project - Starbuck Mobile App on Processing
+# Starbuck Mobile App on Processing
 
 The idea is to leverage the individual project implementation and re-build the Starbuck Mobile App on processing with animation UI. 
 
